@@ -1,0 +1,36 @@
+\begin{table}[H]
+\centering
+\caption{Detalle de métricas basadas en precision-recall por estudio, modelo y tarea predictiva.}\label{tab:detalle_pr}
+\small
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llllll}
+\toprule
+\textbf{Estudio} & \textbf{Modelo} & \textbf{Tarea} & \textbf{Eventos/N} & \textbf{Tipo PR} & \textbf{Valor (IC 95\%)} \\
+\midrule
+    Thoral et al. (2021) & XGBoost & Mortalidad & 74/3,929 & AUPRC & 0.086 \\
+    Thoral et al. (2021) & XGBoost & Readmisión & 189/3,929 & AUPRC & 0.102 \\
+    Thoral et al. (2021) & XGBoost & Readm./Mort. & 263/3,929 & AUPRC & 0.189 \\
+    Khodadadi et al. (2023) & Patient Forest & Mortalidad (MIMIC) & 5,377/50,391 & AUPRC & 0.619 \\
+    Khodadadi et al. (2023) & Patient Forest & Mortalidad (eICU) & 2,983/41,026 & AUPRC & 0.573 \\
+    Khodadadi et al. (2023) & Patient Forest & Readmisión (eICU) & 7,051/41,026 & AUPRC & 0.595 \\
+    Tschoellitsch et al. (2024) & AdaBoost & Readm./Mort. & 310/16,405 & AP & 0.067 \\
+    Tschoellitsch et al. (2024) & Ensemble & Readm./Mort. & 310/16,405 & AP & 0.080 \\
+    Tschoellitsch et al. (2024) & Logistic Regression & Readm./Mort. & 310/16,405 & AP & 0.080 \\
+    Tschoellitsch et al. (2024) & Neural Network & Readm./Mort. & 310/16,405 & AP & 0.063 \\
+    Tschoellitsch et al. (2024) & Random Forest & Readm./Mort. & 310/16,405 & AP & 0.087 \\
+    Tschoellitsch et al. (2024) & Random Forest & Readm./Mort. (ext.) & 2,873/58,434 & AP & 0.140 \\
+    Tschoellitsch et al. (2024) & XGBoost & Readm./Mort. & 310/16,405 & AP & 0.084 \\
+    Tschoellitsch et al. (2024) & XGBoost & Readm./Mort. (ext.) & 2,873/58,434 & AP & 0.142 \\
+    Sun et al. (2024) & CTCL & Mortalidad (eICU) & NR/24,600 & AUPR & 0.837 \\
+    Sun et al. (2024) & CTCL & Readmisión (eICU) & NR/15,360 & AUPR & 0.869 \\
+    Sun et al. (2024) & Logistic Regression & Mortalidad (eICU) & NR/24,600 & AUPR & 0.762 \\
+    Sun et al. (2024) & Logistic Regression & Readmisión (eICU) & NR/15,360 & AUPR & 0.843 \\
+    Sun et al. (2024) & Random Forest & Mortalidad (eICU) & NR/24,600 & AUPR & 0.802 \\
+    Sun et al. (2024) & Random Forest & Readmisión (eICU) & NR/15,360 & AUPR & 0.855 \\
+    Sun et al. (2024) & Transformer & Mortalidad (eICU) & NR/24,600 & AUPR & 0.811 \\
+    Sun et al. (2024) & Transformer & Readmisión (eICU) & NR/15,360 & AUPR & 0.857 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\vspace{0.4em}\footnotesize * eventos estimados a partir de incidencias reportadas; NR = no reportado en el artículo original.
+\end{table}

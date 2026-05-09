@@ -1,0 +1,92 @@
+\begin{table}[H]
+\centering
+\caption{Detalle de AUC-ROC por estudio, modelo y tarea predictiva.}\label{tab:detalle_auc}
+\small
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lllll}
+\toprule
+\textbf{Estudio} & \textbf{Modelo} & \textbf{Tarea} & \textbf{Eventos/N} & \textbf{AUC-ROC (IC 95\%)} \\
+\midrule
+    Curth et al. (2020) & Gradient Boosting & Readm./Mort. (ETZ) & 811*/13,300 & 0.751 \\
+    Curth et al. (2020) & Gradient Boosting & Readm./Mort. (Epic) & 208*/2,847 & 0.746 \\
+    Curth et al. (2020) & Logistic Regression & Readm./Mort. (ETZ) & 811*/13,300 & 0.745 \\
+    Curth et al. (2020) & Logistic Regression & Readm./Mort. (Epic) & 208*/2,847 & 0.800 \\
+    Dam et al. (2025) & Gradient Boosting & Readm./Mort. (AUMC) & 904*/15,328 & 0.765 \\
+    Dam et al. (2025) & Gradient Boosting & Readm./Mort. (MSZ) & 717*/10,092 & 0.709 \\
+    Dam et al. (2025) & Gradient Boosting & Readm./Mort. (OLVG) & 1,340*/19,417 & 0.740 \\
+    Dam et al. (2025) & Gradient Boosting & Readm./Mort. (ext.) & 904*/15,328 & 0.698 \\
+    Dam et al. (2025) & Gradient Boosting & Readm./Mort. (pooled) & 2,057*/29,509 & 0.729 \\
+    Thoral et al. (2021) & LightGBM & Mortalidad & 74/3,929 & 0.839 (0.78--0.90) \\
+    Thoral et al. (2021) & LightGBM & Readmisión & 189/3,929 & 0.724 (0.68--0.77) \\
+    Thoral et al. (2021) & LightGBM & Readm./Mort. & 263/3,929 & 0.776 (0.74--0.81) \\
+    Thoral et al. (2021) & Logistic Regression & Mortalidad & 74/3,929 & 0.849 (0.79--0.90) \\
+    Thoral et al. (2021) & Logistic Regression & Readmisión & 189/3,929 & 0.743 (0.70--0.78) \\
+    Thoral et al. (2021) & Logistic Regression & Readm./Mort. & 263/3,929 & 0.783 (0.75--0.82) \\
+    Thoral et al. (2021) & Random Forest & Mortalidad & 74/3,929 & 0.845 (0.79--0.90) \\
+    Thoral et al. (2021) & Random Forest & Readmisión & 189/3,929 & 0.737 (0.69--0.78) \\
+    Thoral et al. (2021) & Random Forest & Readm./Mort. & 263/3,929 & 0.780 (0.75--0.81) \\
+    Thoral et al. (2021) & SVM & Mortalidad & 74/3,929 & 0.836 (0.78--0.89) \\
+    Thoral et al. (2021) & SVM & Readmisión & 189/3,929 & 0.734 (0.69--0.78) \\
+    Thoral et al. (2021) & SVM & Readm./Mort. & 263/3,929 & 0.789 (0.76--0.82) \\
+    Thoral et al. (2021) & XGBoost & Mortalidad & 74/3,929 & 0.834 (0.78--0.89) \\
+    Thoral et al. (2021) & XGBoost & Readmisión & 189/3,929 & 0.715 (0.67--0.76) \\
+    Thoral et al. (2021) & XGBoost & Readm./Mort. & 263/3,929 & 0.780 (0.75--0.81) \\
+    Shickel et al. (2022) & CatBoost & Mort. InH & 1,131/12,674 & 0.901 \\
+    Shickel et al. (2022) & CatBoost & Readmisión & 613/12,674 & 0.759 \\
+    Shickel et al. (2022) & GRU & Mort. InH & 1,131/12,674 & 0.960 \\
+    Shickel et al. (2022) & GRU & Readmisión & 613/12,674 & 0.750 \\
+    Shickel et al. (2022) & GRU + Attention & Mort. InH & 1,131/12,674 & 0.965 \\
+    Shickel et al. (2022) & GRU + Attention & Readmisión & 613/12,674 & 0.770 \\
+    Shickel et al. (2022) & Transformer & Mortalidad 1a & 2,288/12,674 & 0.892 \\
+    Shickel et al. (2022) & Transformer & Mortalidad 30d & 1,380/12,674 & 0.953 \\
+    Shickel et al. (2022) & Transformer & Mortalidad 7d & 1,022/12,674 & 0.983 \\
+    Shickel et al. (2022) & Transformer & Mortalidad 90d & 1,785/12,674 & 0.923 \\
+    Shickel et al. (2022) & Transformer & Mort. InH & 1,131/12,674 & 0.978 \\
+    Shickel et al. (2022) & Transformer & Readmisión & 613/12,674 & 0.843 \\
+    Shickel et al. (2022) & XGBoost & Mort. InH & 1,131/12,674 & 0.867 \\
+    Shickel et al. (2022) & XGBoost & Readmisión & 613/12,674 & 0.762 \\
+    De Hond et al. (2023) & Gradient Boosting & Readm./Mort. & 577/10,052 & 0.720 (0.67--0.76) \\
+    De Hond et al. (2023) & Gradient Boosting & Readmisión/Mortalidad (re & 577/10,052 & 0.790 (0.75--0.82) \\
+    Khodadadi et al. (2023) & K-Nearest Neighbors & Mortalidad (MIMIC) & 5,377/50,391 & 0.654 \\
+    Khodadadi et al. (2023) & Logistic Regression & Mortalidad (MIMIC) & 5,377/50,391 & 0.773 \\
+    Khodadadi et al. (2023) & Logistic Regression & Mortalidad (eICU) & 2,983/41,026 & 0.833 \\
+    Khodadadi et al. (2023) & Logistic Regression & Readmisión (eICU) & 7,051/41,026 & 0.819 \\
+    Khodadadi et al. (2023) & Naive Bayes & Mortalidad (MIMIC) & 5,377/50,391 & 0.658 \\
+    Khodadadi et al. (2023) & Neural Network & Mortalidad (MIMIC) & 5,377/50,391 & 0.749 \\
+    Khodadadi et al. (2023) & Neural Network & Mortalidad (eICU) & 2,983/41,026 & 0.816 \\
+    Khodadadi et al. (2023) & Neural Network & Readmisión (eICU) & 7,051/41,026 & 0.812 \\
+    Khodadadi et al. (2023) & Patient Forest & Mortalidad (MIMIC) & 5,377/50,391 & 0.801 \\
+    Khodadadi et al. (2023) & Patient Forest & Mortalidad (eICU) & 2,983/41,026 & 0.864 \\
+    Khodadadi et al. (2023) & Patient Forest & Readmisión (eICU) & 7,051/41,026 & 0.869 \\
+    Khodadadi et al. (2023) & Random Forest & Mortalidad (MIMIC) & 5,377/50,391 & 0.763 \\
+    Khodadadi et al. (2023) & Random Forest & Mortalidad (eICU) & 2,983/41,026 & 0.839 \\
+    Khodadadi et al. (2023) & Random Forest & Readmisión (eICU) & 7,051/41,026 & 0.814 \\
+    Khodadadi et al. (2023) & SVM & Mortalidad (MIMIC) & 5,377/50,391 & 0.746 \\
+    Khodadadi et al. (2023) & SVM & Mortalidad (eICU) & 2,983/41,026 & 0.847 \\
+    Khodadadi et al. (2023) & SVM & Readmisión (eICU) & 7,051/41,026 & 0.821 \\
+    Khodadadi et al. (2023) & XGBoost & Mortalidad (MIMIC) & 5,377/50,391 & 0.772 \\
+    Khodadadi et al. (2023) & XGBoost & Mortalidad (eICU) & 2,983/41,026 & 0.813 \\
+    Khodadadi et al. (2023) & XGBoost & Readmisión (eICU) & 7,051/41,026 & 0.808 \\
+    Tschoellitsch et al. (2024) & AdaBoost & Readm./Mort. & 310/16,405 & 0.688 \\
+    Tschoellitsch et al. (2024) & Ensemble & Readm./Mort. & 310/16,405 & 0.714 \\
+    Tschoellitsch et al. (2024) & Logistic Regression & Readm./Mort. & 310/16,405 & 0.680 \\
+    Tschoellitsch et al. (2024) & Neural Network & Readm./Mort. & 310/16,405 & 0.652 \\
+    Tschoellitsch et al. (2024) & Random Forest & Readm./Mort. & 310/16,405 & 0.721 \\
+    Tschoellitsch et al. (2024) & Random Forest & Readm./Mort. (ext.) & 2,873/58,434 & 0.641 \\
+    Tschoellitsch et al. (2024) & XGBoost & Readm./Mort. & 310/16,405 & 0.699 \\
+    Tschoellitsch et al. (2024) & XGBoost & Readm./Mort. (ext.) & 2,873/58,434 & 0.648 \\
+    Sun et al. (2024) & CTCL & Mortalidad (eICU) & NR/24,600 & 0.894 \\
+    Sun et al. (2024) & CTCL & Readmisión (eICU) & NR/15,360 & 0.853 \\
+    Sun et al. (2024) & Logistic Regression & Mortalidad (eICU) & NR/24,600 & 0.848 \\
+    Sun et al. (2024) & Logistic Regression & Readmisión (eICU) & NR/15,360 & 0.808 \\
+    Sun et al. (2024) & Neural Network & Mortalidad (eICU) & NR/24,600 & 0.885 \\
+    Sun et al. (2024) & Neural Network & Readmisión (eICU) & NR/15,360 & 0.822 \\
+    Sun et al. (2024) & Random Forest & Mortalidad (eICU) & NR/24,600 & 0.872 \\
+    Sun et al. (2024) & Random Forest & Readmisión (eICU) & NR/15,360 & 0.822 \\
+    Sun et al. (2024) & Transformer & Mortalidad (eICU) & NR/24,600 & 0.879 \\
+    Sun et al. (2024) & Transformer & Readmisión (eICU) & NR/15,360 & 0.822 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\vspace{0.4em}\footnotesize * eventos estimados a partir de incidencias reportadas; NR = no reportado en el artículo original.
+\end{table}

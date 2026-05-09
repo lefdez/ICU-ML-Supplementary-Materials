@@ -1,0 +1,706 @@
+TY  - JOUR
+AU  - Hanley, J. A.
+AU  - McNeil, B. J.
+TI  - The meaning and use of the area under a receiver operating characteristic (ROC) curve
+JO  - Radiology
+VL  - 143
+IS  - 1
+SP  - 29
+EP  - 36
+PY  - 1982
+DO  - 10.1148/radiology.143.1.7063747
+ID  - Hanley1982
+ER  - 
+
+TY  - CPAPER
+AU  - Vaswani, Ashish
+AU  - Shazeer, Noam
+AU  - Parmar, Niki
+TI  - Attention Is All You Need
+T2  - Advances in Neural Information Processing Systems
+VL  - 30
+PY  - 2017
+UR  - https://papers.neurips.cc/paper/7181-attention-is-all-you-need
+ID  - Vaswani2017
+ER  - 
+
+TY  - JOUR
+AU  - Sun, M.
+AU  - Yang, X.
+AU  - Niu, J.
+TI  - A cross-modal clinical prediction system for intensive care unit patient outcome
+JO  - Knowledge-Based Systems
+VL  - 283
+PY  - 2024
+DO  - 10.1016/j.knosys.2023.111160
+ID  - Sun2024
+ER  - 
+
+TY  - CPAPER
+AU  - Chen, Tianqi
+AU  - Guestrin, Carlos
+TI  - XGBoost: A Scalable Tree Boosting System
+T2  - Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining
+SP  - 785
+EP  - 794
+PY  - 2016
+DO  - 10.1145/2939672.2939785
+ID  - Chen2016XGBoost
+ER  - 
+
+TY  - JOUR
+AU  - Dorogush, A. V.
+AU  - Gulin, A.
+AU  - Gusev, G.
+AU  - Kazeev, N.
+AU  - Prokhorenkova, L. O.
+AU  - Vorobev, A.
+TI  - Fighting biases with dynamic boosting
+JO  - CoRR
+VL  - abs/1706.09516
+PY  - 2017
+UR  - https://arxiv.org/abs/1706.09516
+ID  - Dorogush2017
+ER  - 
+
+TY  - JOUR
+AU  - de Hond, A. A. H.
+AU  - Kant, I. M. J.
+AU  - Fornasa, M.
+AU  - Cinà, G.
+AU  - Elbers, P. W. G.
+AU  - Thoral, P. J.
+AU  - Arbous, M. S.
+AU  - Steyerberg, E. W.
+TI  - Predicting readmission or death after discharge from the ICU: External validation and retraining of a machine learning model
+JO  - Critical Care Medicine
+PY  - 2023
+ID  - Hond2023
+ER  - 
+
+TY  - JOUR
+AU  - Dam, T.
+AU  - de Bruin, D.
+AU  - Cinà, G.
+TI  - ICU readmission and mortality risk prediction: Generalizability of a multi-hospital model
+JO  - Journal of Intensive Medicine
+VL  - 5
+PY  - 2025
+ID  - Dam2025
+ER  - 
+
+TY  - JOUR
+AU  - Tschoellitsch, T.
+AU  - Maletzky, A.
+AU  - Moser, P.
+AU  - Seidl, P.
+AU  - Böck, C.
+AU  - Tomic Mahečić, T.
+AU  - Thumfart, S.
+AU  - Giretzlehner, M.
+AU  - Hochreiter, S.
+AU  - Meier, J.
+TI  - Machine learning prediction of unexpected readmission or death after discharge from intensive care: A retrospective cohort study
+JO  - Journal of Clinical Anesthesia
+VL  - 99
+SP  - 111654
+PY  - 2024
+ID  - Tschoellitsch2024
+ER  - 
+
+TY  - JOUR
+AU  - Shickel, B.
+AU  - Silva, B.
+AU  - Ozrazgat-Baslanti, T.
+AU  - Ren, Y.
+AU  - Khezeli, K.
+AU  - Guan, Z.
+AU  - Tighe, P. J.
+AU  - Bihorac, A.
+AU  - Rashidi, P.
+TI  - Multi-dimensional patient acuity estimation with longitudinal EHR tokenization and flexible transformer networks
+JO  - Frontiers in Digital Health
+VL  - 4
+SP  - 1029191
+PY  - 2022
+DO  - 10.3389/fdgth.2022.1029191
+ID  - Shickel2022
+ER  - 
+
+TY  - JOUR
+AU  - Khodadadi, A.
+AU  - Ghanbari Bousejin, N.
+AU  - Molaei, S.
+AU  - Chauhan, V. K.
+AU  - Zhu, T.
+AU  - Clifton, D. A.
+TI  - Improving diagnostics with deep forest applied to electronic health records
+JO  - Sensors
+VL  - 23
+IS  - 14
+SP  - 6571
+PY  - 2023
+DO  - 10.3390/s23146571
+ID  - Khodadadi2023
+ER  - 
+
+TY  - JOUR
+AU  - Fika, S.
+AU  - Nanas, S.
+AU  - Baltopoulos, G.
+AU  - Charitidou, E.
+AU  - Myrianthefs, P.
+TI  - A novel mortality prediction model for the current population in an adult intensive care unit
+JO  - Heart & Lung
+VL  - 47
+IS  - 1
+SP  - 10
+EP  - 15
+PY  - 2018
+DO  - 10.1016/j.hrtlng.2017.10.009
+ID  - Fika2018
+ER  - 
+
+TY  - JOUR
+AU  - Svetnik, V.
+AU  - Liaw, A.
+AU  - Tong, C.
+AU  - Culberson, J. C.
+AU  - Sheridan, R. P.
+AU  - Feuston, B. P.
+TI  - Random forest: A classification and regression tool for compound classification and QSAR modeling
+JO  - Journal of Chemical Information and Computer Sciences
+VL  - 43
+IS  - 6
+SP  - 1947
+EP  - 1958
+PY  - 2003
+ID  - Svetnik2003
+ER  - 
+
+TY  - JOUR
+AU  - Huang, S.
+AU  - Cai, N.
+AU  - Pacheco, P. P.
+AU  - Narrandes, S.
+AU  - Wang, Y.
+AU  - Xu, W.
+TI  - Applications of support vector machine (SVM) learning in cancer genomics
+JO  - Cancer Genomics and Proteomics
+VL  - 15
+SP  - 41
+EP  - 51
+PY  - 2018
+ID  - Huang2018
+ER  - 
+
+TY  - JOUR
+AU  - Miotto, R.
+AU  - Wang, F.
+AU  - Wang, S.
+AU  - Jiang, X.
+AU  - Dudley, J. T.
+TI  - Deep learning for healthcare: review, opportunities and challenges
+JO  - Briefings in Bioinformatics
+VL  - 19
+IS  - 6
+SP  - 1236
+EP  - 1246
+PY  - 2018
+DO  - 10.1093/bib/bbx044
+ID  - Miotto2018
+ER  - 
+
+TY  - JOUR
+AU  - Sherstinsky, A.
+TI  - Fundamentals of recurrent neural network (RNN) and long short-term memory (LSTM) network
+JO  - Physica D: Nonlinear Phenomena
+VL  - 404
+SP  - 132306
+PY  - 2020
+ID  - Sherstinsky2020
+ER  - 
+
+TY  - JOUR
+AU  - Thoral, P. J.
+TI  - Explainable machine learning on AmsterdamUMCdb for ICU discharge decision support: Uniting intensivists and data scientists
+JO  - Critical Care Explorations
+PY  - 2021
+ID  - Thoral2021
+ER  - 
+
+TY  - CPAPER
+AU  - Curth, A.
+AU  - Thoral, P.
+AU  - van den Wildenberg, W.
+AU  - Bijlstra, P.
+AU  - de Bruin, D.
+AU  - Elbers, P.
+AU  - Fornasa, M.
+TI  - Transferring clinical prediction models across hospitals and electronic health record systems
+T2  - Communications in Computer and Information Science
+PY  - 2020
+ID  - Curth2020
+ER  - 
+
+TY  - JOUR
+AU  - Page, M. J.
+AU  - McKenzie, J. E.
+AU  - Bossuyt, P. M.
+TI  - The PRISMA 2020 statement: An updated guideline for reporting systematic reviews
+JO  - BMJ
+VL  - 372
+SP  - n71
+PY  - 2021
+DO  - 10.1136/bmj.n71
+ID  - Page2021
+ER  - 
+
+TY  - GEN
+AU  - Elsevier
+TI  - Scopus
+PY  - 2026
+UR  - https://www.scopus.com
+N1  - Online database; accessed 2026-04-04
+ID  - ScopusDB
+ER  - 
+
+TY  - GEN
+AU  - Clarivate
+TI  - Web of Science
+PY  - 2026
+UR  - https://www.webofscience.com
+N1  - Online database; accessed 2026-04-04
+ID  - WebOfScienceDB
+ER  - 
+
+TY  - GEN
+AU  - National Center for Biotechnology Information (NCBI), U.S. National Library of Medicine
+TI  - PubMed
+PY  - 2026
+UR  - https://pubmed.ncbi.nlm.nih.gov
+N1  - Online database; accessed 2026-04-04
+ID  - PubMedNCBI
+ER  - 
+
+TY  - GEN
+AU  - Institute of Electrical
+AU  - Electronics Engineers (IEEE)
+TI  - IEEE Xplore Digital Library
+PY  - 2026
+UR  - https://ieeexplore.ieee.org
+N1  - Online database; accessed 2026-04-04
+ID  - IEEEXploreDB
+ER  - 
+
+TY  - GEN
+AU  - Elsevier
+TI  - Mendeley Reference Manager
+PY  - 2026
+UR  - https://www.mendeley.com/reference-management/reference-manager
+N1  - Software; accessed 2026-04-04
+ID  - MendeleyReferenceManager
+ER  - 
+
+TY  - JOUR
+AU  - Wolff, R. F.
+AU  - Moons, K. G.
+AU  - Riley, R. D.
+TI  - PROBAST: A tool to assess the risk of bias and applicability of prediction model studies
+JO  - Annals of Internal Medicine
+VL  - 170
+IS  - 1
+SP  - 31
+EP  - 44
+PY  - 2019
+DO  - 10.7326/M18-2043
+ID  - Wolff2019
+ER  - 
+
+TY  - JOUR
+AU  - Moons, K. G. M.
+AU  - Wolff, R. F.
+AU  - Riley, R. D.
+TI  - PROBAST: Risk of bias and applicability assessments for prediction model studies: Explanation and elaboration
+JO  - Annals of Internal Medicine
+VL  - 170
+IS  - 1
+SP  - W1
+EP  - W33
+PY  - 2019
+DO  - 10.7326/M18-2044
+ID  - Moons2019
+ER  - 
+
+TY  - JOUR
+AU  - Dhiman, P.
+AU  - Ma, J.
+AU  - Navarro, C. A.
+TI  - External validation of models predicting the risk of all-cause mortality in health-care settings: A systematic review
+JO  - The Lancet Digital Health
+VL  - 4
+IS  - 11
+SP  - e830
+EP  - e841
+PY  - 2022
+ID  - Dhiman2022
+ER  - 
+
+TY  - CPAPER
+AU  - Davis, J.
+AU  - Goadrich, M.
+TI  - The Relationship Between Precision-Recall and ROC Curves
+T2  - Proceedings of the 23rd International Conference on Machine Learning (ICML)
+SP  - 233
+EP  - 240
+PY  - 2006
+DO  - 10.1145/1143844.1143874
+ID  - Davis2006
+ER  - 
+
+TY  - JOUR
+AU  - Mandrekar, J. N.
+TI  - Receiver operating characteristic curve in diagnostic test assessment
+JO  - Journal of Thoracic Oncology
+VL  - 5
+IS  - 9
+SP  - 1315
+EP  - 1316
+PY  - 2010
+DO  - 10.1097/JTO.0b013e3181ec173d
+ID  - Mandrekar2010
+ER  - 
+
+TY  - JOUR
+AU  - Powers, D. M. W.
+TI  - Evaluation: From precision, recall and F-measure to ROC, informedness, markedness and correlation
+JO  - Journal of Machine Learning Technologies
+VL  - 2
+IS  - 1
+SP  - 37
+EP  - 63
+PY  - 2011
+ID  - Powers2011
+ER  - 
+
+TY  - JOUR
+AU  - DerSimonian, R.
+AU  - Laird, N.
+TI  - Meta-analysis in clinical trials
+JO  - Controlled Clinical Trials
+VL  - 7
+IS  - 3
+SP  - 177
+EP  - 188
+PY  - 1986
+DO  - 10.1016/0197-2456(86)90046-2
+ID  - DerSimonian1986
+ER  - 
+
+TY  - JOUR
+AU  - Higgins, J. P.
+AU  - Altman, D. G.
+AU  - Gotzsche, P. C.
+AU  - Juni, P.
+AU  - Moher, D.
+AU  - Oxman, A. D.
+AU  - Savovic, J.
+AU  - Schulz, K. F.
+AU  - Weeks, L.
+AU  - Sterne, J. A. C.
+TI  - The Cochrane Collaboration's tool for assessing risk of bias in randomised trials
+JO  - BMJ
+VL  - 343
+SP  - d5928
+PY  - 2011
+DO  - 10.1136/bmj.d5928
+ID  - Higgins2011
+ER  - 
+
+TY  - JOUR
+AU  - Conejero, A. M.
+TI  - How to understand a meta-analysis in a medical journal?
+JO  - Angiologia
+VL  - 74
+IS  - 1
+SP  - 22
+EP  - 26
+PY  - 2022
+DO  - 10.20960/angiologia.00376
+ID  - Conejero2022
+ER  - 
+
+TY  - JOUR
+AU  - Pollard, T. J.
+AU  - Johnson, A. E.
+AU  - Raffa, J. D.
+AU  - Celi, L. A.
+AU  - Mark, R. G.
+AU  - Badawi, O.
+TI  - The eICU Collaborative Research Database, a freely available multi-center database for critical care research
+JO  - Scientific Data
+VL  - 5
+SP  - 180064
+PY  - 2018
+ID  - Pollard2018
+ER  - 
+
+TY  - JOUR
+AU  - Thoral, P. J.
+AU  - Peppink, J. M.
+AU  - Driessen, R. H.
+TI  - Sharing ICU patient data responsibly under the Society of Critical Care Medicine/European Society of Intensive Care Medicine Joint Data Science Collaboration: The Amsterdam University Medical Centers Database (AmsterdamUMCdb) example
+JO  - Critical Care Medicine
+VL  - 49
+SP  - e563
+EP  - e577
+PY  - 2021
+ID  - ThoralAmsterdam2021
+ER  - 
+
+TY  - JOUR
+AU  - Johnson, A. E.
+AU  - Pollard, T. J.
+AU  - Shen, L.
+AU  - Lehman, L.-w. H.
+AU  - Feng, M.
+AU  - Ghassemi, M.
+AU  - Moody, B.
+AU  - Szolovits, P.
+AU  - Celi, L. A.
+AU  - Mark, R. G.
+TI  - MIMIC-III, a freely accessible critical care database
+JO  - Scientific Data
+VL  - 3
+SP  - 160035
+PY  - 2016
+ID  - Johnson2016
+ER  - 
+
+TY  - GEN
+AU  - Johnson, A.
+AU  - Bulgarelli, L.
+AU  - Pollard, T.
+AU  - Horng, S.
+AU  - Celi, L. A.
+AU  - Mark, R.
+TI  - MIMIC-IV
+PB  - PhysioNet
+PY  - 2020
+UR  - https://physionet.org/content/mimiciv/2.2/
+N1  - Internet resource; cited 2023-02-13
+ID  - Johnson2020MIMICIV
+ER  - 
+
+TY  - GEN
+AU  - University of Florida Health
+TI  - Integrated Data Repository (IDR)
+PY  - 2026
+UR  - https://idr.ufhealth.org
+N1  - Online database; accessed 2026-04-04
+ID  - UFHealthIDR
+ER  - 
+
+TY  - JOUR
+AU  - Egger, M.
+AU  - Davey Smith, G.
+AU  - Schneider, M.
+AU  - Minder, C.
+TI  - Bias in meta-analysis detected by a simple, graphical test
+JO  - BMJ
+VL  - 315
+IS  - 7109
+SP  - 629
+EP  - 634
+PY  - 1997
+DO  - 10.1136/bmj.315.7109.629
+ID  - Egger1997
+ER  - 
+
+TY  - JOUR
+AU  - Guyatt, G. H.
+AU  - Oxman, A. D.
+AU  - Vist, G. E.
+AU  - Kunz, R.
+AU  - Falck-Ytter, Y.
+AU  - Alonso-Coello, P.
+AU  - Schünemann, H. J.
+TI  - GRADE: An emerging consensus on rating quality of evidence and strength of recommendations
+JO  - BMJ
+VL  - 336
+IS  - 7650
+SP  - 924
+EP  - 926
+PY  - 2008
+ID  - Guyatt2008
+ER  - 
+
+TY  - JOUR
+AU  - Hultcrantz, M.
+AU  - Rind, D.
+AU  - Akl, E. A.
+TI  - The GRADE Working Group clarifies the construct of certainty of evidence
+JO  - Journal of Clinical Epidemiology
+VL  - 87
+SP  - 4
+EP  - 13
+PY  - 2017
+ID  - Hultcrantz2017
+ER  - 
+
+TY  - JOUR
+AU  - Beltagy, I.
+AU  - Peters, M. E.
+AU  - Cohan, A.
+TI  - Longformer: the long-document transformer
+JO  - arXiv
+PY  - 2020
+ID  - Beltagy2020
+ER  - 
+
+TY  - JOUR
+AU  - Zhou, Z.-H.
+AU  - Feng, J.
+TI  - Deep forest
+JO  - National Science Review
+VL  - 6
+IS  - 1
+SP  - 74
+EP  - 86
+PY  - 2019
+ID  - Zhou2019
+ER  - 
+
+TY  - CPAPER
+AU  - Ke, G.
+AU  - Meng, Q.
+AU  - Finley, T.
+AU  - Wang, T.
+AU  - Chen, W.
+AU  - Ma, W.
+AU  - Ye, Q.
+AU  - Liu, T.-Y.
+TI  - LightGBM: A highly efficient gradient boosting decision tree
+T2  - Advances in Neural Information Processing Systems
+VL  - 30
+PY  - 2017
+ID  - Ke2017LightGBM
+ER  - 
+
+TY  - CPAPER
+AU  - Prokhorenkova, L.
+AU  - Gusev, G.
+AU  - Vorobev, A.
+AU  - Dorogush, A. V.
+AU  - Gulin, A.
+TI  - CatBoost: unbiased boosting with categorical features
+T2  - Advances in Neural Information Processing Systems
+VL  - 31
+PY  - 2018
+ID  - Prokhorenkova2018CatBoost
+ER  - 
+
+TY  - JOUR
+AU  - de Hond, A. A. H.
+AU  - Kant, I. M. J.
+AU  - Fornasa, M.
+AU  - Cinà, G.
+AU  - Elbers, P. W. G.
+AU  - Thoral, P. J.
+AU  - Arbous, M. S.
+AU  - Steyerberg, E. W.
+TI  - Predicting readmission or death after discharge from the ICU: External validation and retraining of a machine learning model
+JO  - Critical Care Medicine
+PY  - 2023
+ID  - DeHond2023
+ER  - 
+
+TY  - JOUR
+AU  - Freund, Y.
+AU  - Schapire, R. E.
+TI  - A decision-theoretic generalization of on-line learning and an application to boosting
+JO  - Journal of Computer and System Sciences
+VL  - 55
+IS  - 1
+SP  - 119
+EP  - 139
+PY  - 1997
+DO  - 10.1006/jcss.1997.1504
+ID  - Freund1997AdaBoost
+ER  - 
+
+TY  - CPAPER
+AU  - Dietterich, T. G.
+TI  - Ensemble methods in machine learning
+T2  - Multiple Classifier Systems
+T3  - Lecture Notes in Computer Science
+VL  - 1857
+SP  - 1
+EP  - 15
+PY  - 2000
+DO  - 10.1007/3-540-45014-9_1
+ID  - Dietterich2000Ensemble
+ER  - 
+
+TY  - JOUR
+AU  - Gajic, O.
+AU  - Malinchoc, S.
+AU  - Comfere, R. S.
+AU  - Harris, V. L.
+AU  - Achouiti, M. B.
+AU  - Yilmaz, C. A.
+AU  - Afessa, T. M.
+AU  - Hubmayr, S.
+TI  - The Stability and Workload Index for Transfer score predicts unplanned intensive care unit patient readmission: initial development and validation
+JO  - Critical Care Medicine
+VL  - 36
+IS  - 3
+SP  - 676
+EP  - 682
+PY  - 2008
+DO  - 10.1097/CCM.0B013E3181643F23
+ID  - Gajic2008SWIFT
+ER  - 
+
+TY  - BOOK
+AU  - Higgins, J. P. T.
+AU  - Thomas, J.
+AU  - Chandler, J.
+AU  - Cumpston, M.
+AU  - Li, T.
+AU  - Page, M. J.
+AU  - Welch, V. A.
+TI  - Cochrane Handbook for Systematic Reviews of Interventions
+PB  - Cochrane
+ET  - 6.4
+PY  - 2023
+ID  - Higgins2023
+ER  - 
+
+TY  - BOOK
+AU  - Koller, D.
+AU  - Friedman, N.
+AU  - Bach, F.
+TI  - Probabilistic Graphical Models: Principles and Techniques
+T3  - Adaptive Computation and Machine Learning
+PB  - MIT Press
+CY  - Cambridge, MA, USA
+PY  - 2009
+ID  - Koller2009
+ER  - 
+
+TY  - JOUR
+AU  - Collins, G. S.
+AU  - Reitsma, J. B.
+AU  - Altman, D. G.
+AU  - Moons, K. G. M.
+TI  - Transparent reporting of a multivariable prediction model for individual prognosis or diagnosis (TRIPOD): The TRIPOD statement
+JO  - Annals of Internal Medicine
+VL  - 162
+IS  - 1
+SP  - 55
+EP  - 63
+PY  - 2015
+DO  - 10.7326/M14-0697
+ID  - Collins2015
+ER  - 

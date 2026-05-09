@@ -1,0 +1,1541 @@
+% ==================================================================
+% Forest Plots por Modelo -- Meta-analisis PRISMA 2020
+%
+% Generado automaticamente desde modelos_extraidos.json
+% Compilar: pdflatex forest_plots_por_modelo_latex.tex  (x2)
+% ==================================================================
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage[margin=2cm]{geometry}
+\usepackage{booktabs, multirow, adjustbox, float}
+\usepackage{longtable, array, xcolor, caption}
+\usepackage{pgfplots, tikz}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\pgfplotsset{compat=1.18}
+\hypersetup{colorlinks=true, linkcolor=blue!60!black, citecolor=green!50!black, urlcolor=blue!70}
+
+\title{%
+    \Large\bfseries Forest Plots por Modelo de Aprendizaje Automático\\[8pt]
+    \large Metaanálisis PRISMA 2020 --- Predicción de Readmisión y Mortalidad en UCI\\[12pt]
+    \normalsize\textit{17 modelos $\cdot$ 8 estudios $\cdot$ 78 AUC-ROC + 22 PR métricas}
+}
+\author{Revisión Sistemática y Metaanálisis PRISMA 2020}
+\date{Abril 2026}
+
+\begin{document}
+\maketitle
+
+\section{AUC-ROC Metrics}
+
+\section{Forest Plot Global}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=16cm, height=7.1cm,
+    symbolic y coords={
+        Transformer,
+        CTCL,
+        {GRU + Attention},
+        GRU,
+        Patient Forest,
+        CatBoost,
+        SVM,
+        Neural Network,
+        Logistic Regression,
+        Random Forest,
+        LightGBM,
+        XGBoost,
+        Gradient Boosting,
+        Ensemble,
+        AdaBoost,
+        Naive Bayes,
+        K-Nearest Neighbors
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.55, xmax=1.02,
+    xlabel={AUC-ROC (Efecto combinado por modelo)},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\footnotesize},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!30},
+    axis lines=left,
+    enlarge y limits=0.06,
+    legend style={at={(0.98,0.02)}, anchor=south east, font=\scriptsize},
+    title={\textbf{Efecto combinado del AUC-ROC por tipo de modelo}},
+    title style={font=\normalsize},
+]
+
+\draw[red!60, dashed, thin] (axis cs:0.80,Transformer) -- (axis cs:0.80,K-Nearest Neighbors);
+\draw[orange!70, dashed, thin] (axis cs:0.70,Transformer) -- (axis cs:0.70,K-Nearest Neighbors);
+
+\addplot[only marks, mark=diamond*, mark size=4.5pt, fill=red!70, draw=red!90]
+    coordinates {
+(0.909,Transformer)
+(0.874,CTCL)
+(0.868,{GRU + Attention})
+(0.855,GRU)
+(0.845,Patient Forest)
+(0.830,CatBoost)
+(0.793,SVM)
+(0.789,Neural Network)
+(0.788,Logistic Regression)
+(0.783,Random Forest)
+(0.777,LightGBM)
+(0.769,XGBoost)
+(0.742,Gradient Boosting)
+(0.714,Ensemble)
+(0.688,AdaBoost)
+(0.658,Naive Bayes)
+(0.654,K-Nearest Neighbors)
+    };
+
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, black}]
+    coordinates {
+(0.909,Transformer) +- (0.0418,0)
+(0.874,CTCL) +- (0.0416,0)
+(0.868,{GRU + Attention}) +- (0.1911,0)
+(0.855,GRU) +- (0.2058,0)
+(0.845,Patient Forest) +- (0.0429,0)
+(0.830,CatBoost) +- (0.1392,0)
+(0.793,SVM) +- (0.0364,0)
+(0.789,Neural Network) +- (0.0639,0)
+(0.788,Logistic Regression) +- (0.0288,0)
+(0.783,Random Forest) +- (0.0396,0)
+(0.777,LightGBM) +- (0.0570,0)
+(0.769,XGBoost) +- (0.0384,0)
+(0.742,Gradient Boosting) +- (0.0219,0)
+(0.714,Ensemble) +- (0.0588,0)
+(0.688,AdaBoost) +- (0.0588,0)
+(0.658,Naive Bayes) +- (0.0588,0)
+(0.654,K-Nearest Neighbors) +- (0.0588,0)
+    };
+
+\legend{Efecto combinado (efectos aleatorios), IC 95\%}
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot global: efecto combinado del AUC-ROC por tipo de modelo
+de aprendizaje automático (modelo de efectos aleatorios con ponderación por inversa de varianza).
+Líneas de referencia: AUC\,=\,0{,}70 (naranja) y AUC\,=\,0{,}80 (rojo).}
+\label{fig:fp_global}
+\end{figure}
+
+\newpage
+\subsection{Forest Plots Individuales por Modelo (AUC-ROC)}
+
+\subsection{Logistic Regression (11 entradas, 5 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=8.6cm,
+    symbolic y coords={
+        {Curth 2020 / Readm./Mort. (ETZ)},
+        {Curth 2020 / Readm./Mort. (Epic)},
+        {Thoral 2021 / Mort.},
+        {Thoral 2021 / Readm.},
+        {Thoral 2021 / Readm./Mort.},
+        {Khodadadi 2023 / Mort. (MIMIC)},
+        {Khodadadi 2023 / Mort. (eICU)},
+        {Khodadadi 2023 / Readm. (eICU)},
+        {Tschoellitsch 2024 / Readm./Mort.},
+        {Sun 2024 / Mort. (eICU)},
+        {Sun 2024 / Readm. (eICU)},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.55, xmax=1.00,
+    xlabel={AUC-ROC},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{Logistic Regression}},
+    title style={font=\normalsize},
+]
+
+\draw[red!50, dashed, thin] (axis cs:0.80,{Curth 2020 / Readm./Mort. (ETZ)}) -- (axis cs:0.80,Efecto combinado);
+
+% Entradas individuales con IC 95%
+\addplot[only marks, mark=square*, fill=blue!70, mark size=3.5pt, draw=blue!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, blue!50}]
+    coordinates {
+(0.745,{Curth 2020 / Readm./Mort. (ETZ)}) +- (0.0588,0)
+(0.800,{Curth 2020 / Readm./Mort. (Epic)}) +- (0.0588,0)
+(0.849,{Thoral 2021 / Mort.}) +- (0.0555,0)
+(0.743,{Thoral 2021 / Readm.}) +- (0.0410,0)
+(0.783,{Thoral 2021 / Readm./Mort.}) +- (0.0335,0)
+(0.773,{Khodadadi 2023 / Mort. (MIMIC)}) +- (0.0588,0)
+(0.833,{Khodadadi 2023 / Mort. (eICU)}) +- (0.0588,0)
+(0.819,{Khodadadi 2023 / Readm. (eICU)}) +- (0.0588,0)
+(0.680,{Tschoellitsch 2024 / Readm./Mort.}) +- (0.0588,0)
+(0.848,{Sun 2024 / Mort. (eICU)}) +- (0.0588,0)
+(0.808,{Sun 2024 / Readm. (eICU)}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=red!70, mark size=5pt, draw=red!90]
+    coordinates {(0.788,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, red!70}]
+    coordinates {(0.788,{Efecto combinado}) +- (0.0288,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot --- Logistic Regression. Efecto combinado: 0.788 (IC~95\%: 0.760--0.817). Algunas entradas incluyen IC~95\% reportado por los autores.}
+\end{figure}
+
+\newpage
+
+\subsection{Random Forest (10 entradas, 4 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=8.0cm,
+    symbolic y coords={
+        {Thoral 2021 / Mort.},
+        {Thoral 2021 / Readm.},
+        {Thoral 2021 / Readm./Mort.},
+        {Khodadadi 2023 / Mort. (MIMIC)},
+        {Khodadadi 2023 / Mort. (eICU)},
+        {Khodadadi 2023 / Readm. (eICU)},
+        {Tschoellitsch 2024 / Readm./Mort.},
+        {Tschoellitsch 2024 / Readm./Mort. (ext.)},
+        {Sun 2024 / Mort. (eICU)},
+        {Sun 2024 / Readm. (eICU)},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.50, xmax=1.00,
+    xlabel={AUC-ROC},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{Random Forest}},
+    title style={font=\normalsize},
+]
+
+\draw[red!50, dashed, thin] (axis cs:0.80,{Thoral 2021 / Mort.}) -- (axis cs:0.80,Efecto combinado);
+
+% Entradas individuales con IC 95%
+\addplot[only marks, mark=square*, fill=blue!70, mark size=3.5pt, draw=blue!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, blue!50}]
+    coordinates {
+(0.845,{Thoral 2021 / Mort.}) +- (0.0560,0)
+(0.737,{Thoral 2021 / Readm.}) +- (0.0415,0)
+(0.780,{Thoral 2021 / Readm./Mort.}) +- (0.0335,0)
+(0.763,{Khodadadi 2023 / Mort. (MIMIC)}) +- (0.0588,0)
+(0.839,{Khodadadi 2023 / Mort. (eICU)}) +- (0.0588,0)
+(0.814,{Khodadadi 2023 / Readm. (eICU)}) +- (0.0588,0)
+(0.721,{Tschoellitsch 2024 / Readm./Mort.}) +- (0.0588,0)
+(0.641,{Tschoellitsch 2024 / Readm./Mort. (ext.)}) +- (0.0588,0)
+(0.872,{Sun 2024 / Mort. (eICU)}) +- (0.0588,0)
+(0.822,{Sun 2024 / Readm. (eICU)}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=red!70, mark size=5pt, draw=red!90]
+    coordinates {(0.783,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, red!70}]
+    coordinates {(0.783,{Efecto combinado}) +- (0.0396,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot --- Random Forest. Efecto combinado: 0.783 (IC~95\%: 0.743--0.823). Algunas entradas incluyen IC~95\% reportado por los autores.}
+\end{figure}
+
+\newpage
+
+\subsection{XGBoost (10 entradas, 4 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=8.0cm,
+    symbolic y coords={
+        {Thoral 2021 / Mort.},
+        {Thoral 2021 / Readm.},
+        {Thoral 2021 / Readm./Mort.},
+        {Shickel 2022 / Mort. Intrahosp.},
+        {Shickel 2022 / Readm.},
+        {Khodadadi 2023 / Mort. (MIMIC)},
+        {Khodadadi 2023 / Mort. (eICU)},
+        {Khodadadi 2023 / Readm. (eICU)},
+        {Tschoellitsch 2024 / Readm./Mort.},
+        {Tschoellitsch 2024 / Readm./Mort. (ext.)},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.50, xmax=1.00,
+    xlabel={AUC-ROC},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{XGBoost}},
+    title style={font=\normalsize},
+]
+
+\draw[red!50, dashed, thin] (axis cs:0.80,{Thoral 2021 / Mort.}) -- (axis cs:0.80,Efecto combinado);
+
+% Entradas individuales con IC 95%
+\addplot[only marks, mark=square*, fill=blue!70, mark size=3.5pt, draw=blue!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, blue!50}]
+    coordinates {
+(0.834,{Thoral 2021 / Mort.}) +- (0.0570,0)
+(0.715,{Thoral 2021 / Readm.}) +- (0.0420,0)
+(0.780,{Thoral 2021 / Readm./Mort.}) +- (0.0335,0)
+(0.867,{Shickel 2022 / Mort. Intrahosp.}) +- (0.0588,0)
+(0.762,{Shickel 2022 / Readm.}) +- (0.0588,0)
+(0.772,{Khodadadi 2023 / Mort. (MIMIC)}) +- (0.0588,0)
+(0.813,{Khodadadi 2023 / Mort. (eICU)}) +- (0.0588,0)
+(0.808,{Khodadadi 2023 / Readm. (eICU)}) +- (0.0588,0)
+(0.699,{Tschoellitsch 2024 / Readm./Mort.}) +- (0.0588,0)
+(0.648,{Tschoellitsch 2024 / Readm./Mort. (ext.)}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=red!70, mark size=5pt, draw=red!90]
+    coordinates {(0.769,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, red!70}]
+    coordinates {(0.769,{Efecto combinado}) +- (0.0384,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot --- XGBoost. Efecto combinado: 0.769 (IC~95\%: 0.731--0.808). Algunas entradas incluyen IC~95\% reportado por los autores.}
+\end{figure}
+
+\newpage
+
+\subsection{Gradient Boosting (9 entradas, 3 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=7.3cm,
+    symbolic y coords={
+        {Curth 2020 / Readm./Mort. (ETZ)},
+        {Curth 2020 / Readm./Mort. (Epic)},
+        {Dam 2025 / Readm./Mort. (AUMC)},
+        {Dam 2025 / Readm./Mort. (MSZ)},
+        {Dam 2025 / Readm./Mort. (OLVG)},
+        {Dam 2025 / Readm./Mort. (ext.)},
+        {Dam 2025 / Readm./Mort. (pooled)},
+        {De Hond 2023 / Readm./Mort.},
+        {De Hond 2023 / Readm./Mort. (retr.)},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.55, xmax=0.90,
+    xlabel={AUC-ROC},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{Gradient Boosting}},
+    title style={font=\normalsize},
+]
+
+\draw[red!50, dashed, thin] (axis cs:0.80,{Curth 2020 / Readm./Mort. (ETZ)}) -- (axis cs:0.80,Efecto combinado);
+
+% Entradas individuales con IC 95%
+\addplot[only marks, mark=square*, fill=blue!70, mark size=3.5pt, draw=blue!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, blue!50}]
+    coordinates {
+(0.751,{Curth 2020 / Readm./Mort. (ETZ)}) +- (0.0588,0)
+(0.746,{Curth 2020 / Readm./Mort. (Epic)}) +- (0.0588,0)
+(0.765,{Dam 2025 / Readm./Mort. (AUMC)}) +- (0.0588,0)
+(0.709,{Dam 2025 / Readm./Mort. (MSZ)}) +- (0.0588,0)
+(0.740,{Dam 2025 / Readm./Mort. (OLVG)}) +- (0.0588,0)
+(0.698,{Dam 2025 / Readm./Mort. (ext.)}) +- (0.0588,0)
+(0.729,{Dam 2025 / Readm./Mort. (pooled)}) +- (0.0588,0)
+(0.720,{De Hond 2023 / Readm./Mort.}) +- (0.0450,0)
+(0.790,{De Hond 2023 / Readm./Mort. (retr.)}) +- (0.0350,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=red!70, mark size=5pt, draw=red!90]
+    coordinates {(0.742,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, red!70}]
+    coordinates {(0.742,{Efecto combinado}) +- (0.0219,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot --- Gradient Boosting. Efecto combinado: 0.742 (IC~95\%: 0.720--0.764). Algunas entradas incluyen IC~95\% reportado por los autores.}
+\end{figure}
+
+\newpage
+
+\subsection{Transformer (8 entradas, 2 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=6.7cm,
+    symbolic y coords={
+        {Shickel 2022 / Mort. 1a},
+        {Shickel 2022 / Mort. 30d},
+        {Shickel 2022 / Mort. 7d},
+        {Shickel 2022 / Mort. 90d},
+        {Shickel 2022 / Mort. Intrahosp.},
+        {Shickel 2022 / Readm.},
+        {Sun 2024 / Mort. (eICU)},
+        {Sun 2024 / Readm. (eICU)},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.70, xmax=1.05,
+    xlabel={AUC-ROC},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{Transformer}},
+    title style={font=\normalsize},
+]
+
+\draw[red!50, dashed, thin] (axis cs:0.80,{Shickel 2022 / Mort. 1a}) -- (axis cs:0.80,Efecto combinado);
+
+% Entradas individuales con IC 95%
+\addplot[only marks, mark=square*, fill=blue!70, mark size=3.5pt, draw=blue!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, blue!50}]
+    coordinates {
+(0.892,{Shickel 2022 / Mort. 1a}) +- (0.0588,0)
+(0.953,{Shickel 2022 / Mort. 30d}) +- (0.0529,0)
+(0.983,{Shickel 2022 / Mort. 7d}) +- (0.0379,0)
+(0.923,{Shickel 2022 / Mort. 90d}) +- (0.0588,0)
+(0.978,{Shickel 2022 / Mort. Intrahosp.}) +- (0.0404,0)
+(0.843,{Shickel 2022 / Readm.}) +- (0.0588,0)
+(0.879,{Sun 2024 / Mort. (eICU)}) +- (0.0588,0)
+(0.822,{Sun 2024 / Readm. (eICU)}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=red!70, mark size=5pt, draw=red!90]
+    coordinates {(0.909,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, red!70}]
+    coordinates {(0.909,{Efecto combinado}) +- (0.0418,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot --- Transformer. Efecto combinado: 0.909 (IC~95\%: 0.867--0.951).}
+\end{figure}
+
+\newpage
+
+\subsection{SVM (6 entradas, 2 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=5.3cm,
+    symbolic y coords={
+        {Thoral 2021 / Mort.},
+        {Thoral 2021 / Readm.},
+        {Thoral 2021 / Readm./Mort.},
+        {Khodadadi 2023 / Mort. (MIMIC)},
+        {Khodadadi 2023 / Mort. (eICU)},
+        {Khodadadi 2023 / Readm. (eICU)},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.60, xmax=1.00,
+    xlabel={AUC-ROC},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{SVM}},
+    title style={font=\normalsize},
+]
+
+\draw[red!50, dashed, thin] (axis cs:0.80,{Thoral 2021 / Mort.}) -- (axis cs:0.80,Efecto combinado);
+
+% Entradas individuales con IC 95%
+\addplot[only marks, mark=square*, fill=blue!70, mark size=3.5pt, draw=blue!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, blue!50}]
+    coordinates {
+(0.836,{Thoral 2021 / Mort.}) +- (0.0570,0)
+(0.734,{Thoral 2021 / Readm.}) +- (0.0415,0)
+(0.789,{Thoral 2021 / Readm./Mort.}) +- (0.0330,0)
+(0.746,{Khodadadi 2023 / Mort. (MIMIC)}) +- (0.0588,0)
+(0.847,{Khodadadi 2023 / Mort. (eICU)}) +- (0.0588,0)
+(0.821,{Khodadadi 2023 / Readm. (eICU)}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=red!70, mark size=5pt, draw=red!90]
+    coordinates {(0.793,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, red!70}]
+    coordinates {(0.793,{Efecto combinado}) +- (0.0364,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot --- SVM. Efecto combinado: 0.793 (IC~95\%: 0.757--0.829). Algunas entradas incluyen IC~95\% reportado por los autores.}
+\end{figure}
+
+\subsection{Neural Network (6 entradas, 3 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=5.3cm,
+    symbolic y coords={
+        {Khodadadi 2023 / Mort. (MIMIC)},
+        {Khodadadi 2023 / Mort. (eICU)},
+        {Khodadadi 2023 / Readm. (eICU)},
+        {Tschoellitsch 2024 / Readm./Mort.},
+        {Sun 2024 / Mort. (eICU)},
+        {Sun 2024 / Readm. (eICU)},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.50, xmax=1.00,
+    xlabel={AUC-ROC},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{Neural Network}},
+    title style={font=\normalsize},
+]
+
+\draw[red!50, dashed, thin] (axis cs:0.80,{Khodadadi 2023 / Mort. (MIMIC)}) -- (axis cs:0.80,Efecto combinado);
+
+% Entradas individuales con IC 95%
+\addplot[only marks, mark=square*, fill=blue!70, mark size=3.5pt, draw=blue!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, blue!50}]
+    coordinates {
+(0.749,{Khodadadi 2023 / Mort. (MIMIC)}) +- (0.0588,0)
+(0.816,{Khodadadi 2023 / Mort. (eICU)}) +- (0.0588,0)
+(0.812,{Khodadadi 2023 / Readm. (eICU)}) +- (0.0588,0)
+(0.652,{Tschoellitsch 2024 / Readm./Mort.}) +- (0.0588,0)
+(0.885,{Sun 2024 / Mort. (eICU)}) +- (0.0588,0)
+(0.822,{Sun 2024 / Readm. (eICU)}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=red!70, mark size=5pt, draw=red!90]
+    coordinates {(0.789,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, red!70}]
+    coordinates {(0.789,{Efecto combinado}) +- (0.0639,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot --- Neural Network. Efecto combinado: 0.789 (IC~95\%: 0.725--0.853).}
+\end{figure}
+
+\subsection{Patient Forest (3 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.4cm,
+    symbolic y coords={
+        {Khodadadi 2023 / Mort. (MIMIC)},
+        {Khodadadi 2023 / Mort. (eICU)},
+        {Khodadadi 2023 / Readm. (eICU)},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.65, xmax=1.00,
+    xlabel={AUC-ROC},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{Patient Forest}},
+    title style={font=\normalsize},
+]
+
+\draw[red!50, dashed, thin] (axis cs:0.80,{Khodadadi 2023 / Mort. (MIMIC)}) -- (axis cs:0.80,Efecto combinado);
+
+% Entradas individuales con IC 95%
+\addplot[only marks, mark=square*, fill=blue!70, mark size=3.5pt, draw=blue!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, blue!50}]
+    coordinates {
+(0.801,{Khodadadi 2023 / Mort. (MIMIC)}) +- (0.0588,0)
+(0.864,{Khodadadi 2023 / Mort. (eICU)}) +- (0.0588,0)
+(0.869,{Khodadadi 2023 / Readm. (eICU)}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=red!70, mark size=5pt, draw=red!90]
+    coordinates {(0.845,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, red!70}]
+    coordinates {(0.845,{Efecto combinado}) +- (0.0429,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot --- Patient Forest. Efecto combinado: 0.845 (IC~95\%: 0.802--0.888).}
+\end{figure}
+
+\subsection{LightGBM (3 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.4cm,
+    symbolic y coords={
+        {Thoral 2021 / Mort.},
+        {Thoral 2021 / Readm.},
+        {Thoral 2021 / Readm./Mort.},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.60, xmax=0.95,
+    xlabel={AUC-ROC},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{LightGBM}},
+    title style={font=\normalsize},
+]
+
+\draw[red!50, dashed, thin] (axis cs:0.80,{Thoral 2021 / Mort.}) -- (axis cs:0.80,Efecto combinado);
+
+% Entradas individuales con IC 95%
+\addplot[only marks, mark=square*, fill=blue!70, mark size=3.5pt, draw=blue!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, blue!50}]
+    coordinates {
+(0.839,{Thoral 2021 / Mort.}) +- (0.0565,0)
+(0.724,{Thoral 2021 / Readm.}) +- (0.0420,0)
+(0.776,{Thoral 2021 / Readm./Mort.}) +- (0.0335,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=red!70, mark size=5pt, draw=red!90]
+    coordinates {(0.777,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, red!70}]
+    coordinates {(0.777,{Efecto combinado}) +- (0.0570,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot --- LightGBM. Efecto combinado: 0.777 (IC~95\%: 0.720--0.834). Algunas entradas incluyen IC~95\% reportado por los autores.}
+\end{figure}
+
+\subsection{CTCL (2 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.0cm,
+    symbolic y coords={
+        {Sun 2024 / Mort. (eICU)},
+        {Sun 2024 / Readm. (eICU)},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.70, xmax=1.05,
+    xlabel={AUC-ROC},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{CTCL}},
+    title style={font=\normalsize},
+]
+
+\draw[red!50, dashed, thin] (axis cs:0.80,{Sun 2024 / Mort. (eICU)}) -- (axis cs:0.80,Efecto combinado);
+
+% Entradas individuales con IC 95%
+\addplot[only marks, mark=square*, fill=blue!70, mark size=3.5pt, draw=blue!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, blue!50}]
+    coordinates {
+(0.894,{Sun 2024 / Mort. (eICU)}) +- (0.0588,0)
+(0.853,{Sun 2024 / Readm. (eICU)}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=red!70, mark size=5pt, draw=red!90]
+    coordinates {(0.874,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, red!70}]
+    coordinates {(0.874,{Efecto combinado}) +- (0.0416,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot --- CTCL. Efecto combinado: 0.874 (IC~95\%: 0.832--0.915).}
+\end{figure}
+
+\subsection{GRU + Attention (2 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.0cm,
+    symbolic y coords={
+        {Shickel 2022 / Mort. Intrahosp.},
+        {Shickel 2022 / Readm.},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.60, xmax=1.05,
+    xlabel={AUC-ROC},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{GRU + Attention}},
+    title style={font=\normalsize},
+]
+
+\draw[red!50, dashed, thin] (axis cs:0.80,{Shickel 2022 / Mort. Intrahosp.}) -- (axis cs:0.80,Efecto combinado);
+
+% Entradas individuales con IC 95%
+\addplot[only marks, mark=square*, fill=blue!70, mark size=3.5pt, draw=blue!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, blue!50}]
+    coordinates {
+(0.965,{Shickel 2022 / Mort. Intrahosp.}) +- (0.0469,0)
+(0.770,{Shickel 2022 / Readm.}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=red!70, mark size=5pt, draw=red!90]
+    coordinates {(0.868,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, red!70}]
+    coordinates {(0.868,{Efecto combinado}) +- (0.1911,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot --- GRU + Attention. Efecto combinado: 0.868 (IC~95\%: 0.676--1.059).}
+\end{figure}
+
+\subsection{GRU (2 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.0cm,
+    symbolic y coords={
+        {Shickel 2022 / Mort. Intrahosp.},
+        {Shickel 2022 / Readm.},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.55, xmax=1.05,
+    xlabel={AUC-ROC},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{GRU}},
+    title style={font=\normalsize},
+]
+
+\draw[red!50, dashed, thin] (axis cs:0.80,{Shickel 2022 / Mort. Intrahosp.}) -- (axis cs:0.80,Efecto combinado);
+
+% Entradas individuales con IC 95%
+\addplot[only marks, mark=square*, fill=blue!70, mark size=3.5pt, draw=blue!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, blue!50}]
+    coordinates {
+(0.960,{Shickel 2022 / Mort. Intrahosp.}) +- (0.0494,0)
+(0.750,{Shickel 2022 / Readm.}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=red!70, mark size=5pt, draw=red!90]
+    coordinates {(0.855,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, red!70}]
+    coordinates {(0.855,{Efecto combinado}) +- (0.2058,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot --- GRU. Efecto combinado: 0.855 (IC~95\%: 0.649--1.061).}
+\end{figure}
+
+\subsection{CatBoost (2 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.0cm,
+    symbolic y coords={
+        {Shickel 2022 / Mort. Intrahosp.},
+        {Shickel 2022 / Readm.},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.60, xmax=1.05,
+    xlabel={AUC-ROC},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{CatBoost}},
+    title style={font=\normalsize},
+]
+
+\draw[red!50, dashed, thin] (axis cs:0.80,{Shickel 2022 / Mort. Intrahosp.}) -- (axis cs:0.80,Efecto combinado);
+
+% Entradas individuales con IC 95%
+\addplot[only marks, mark=square*, fill=blue!70, mark size=3.5pt, draw=blue!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, blue!50}]
+    coordinates {
+(0.901,{Shickel 2022 / Mort. Intrahosp.}) +- (0.0588,0)
+(0.759,{Shickel 2022 / Readm.}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=red!70, mark size=5pt, draw=red!90]
+    coordinates {(0.830,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, red!70}]
+    coordinates {(0.830,{Efecto combinado}) +- (0.1392,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot --- CatBoost. Efecto combinado: 0.830 (IC~95\%: 0.691--0.969).}
+\end{figure}
+
+\newpage
+\section{Precision-Recall Metrics}
+
+\section{Forest Plot Global PR (Precision-Recall)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=16cm, height=6.0cm,
+    symbolic y coords={
+        {CTCL (AUPR/AUPRC)},
+        {Transformer (AUPR/AUPRC)},
+        {Random Forest (AUPR/AUPRC)},
+        {Logistic Regression (AUPR/AUPRC)},
+        {Patient Forest (AUPR/AUPRC)},
+        {XGBoost (AUPR/AUPRC)},
+        {Random Forest (AP)},
+        {XGBoost (AP)},
+        {Ensemble (AP)},
+        {Logistic Regression (AP)},
+        {AdaBoost (AP)},
+        {Neural Network (AP)}
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.45, xmax=1.02,
+    xlabel={AUPRC / AP (Efecto combinado por modelo y familia)},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\footnotesize},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!30},
+    axis lines=left,
+    enlarge y limits=0.06,
+    legend style={at={(0.98,0.02)}, anchor=south east, font=\scriptsize},
+    title={\textbf{Efecto combinado de m\'etricas PR por modelo (separadas por familia)}},
+    title style={font=\normalsize},
+]
+
+\addplot[only marks, mark=diamond*, mark size=4.5pt, fill=green!70, draw=green!90]
+    coordinates {
+(0.853,{CTCL (AUPR/AUPRC)})
+(0.834,{Transformer (AUPR/AUPRC)})
+(0.829,{Random Forest (AUPR/AUPRC)})
+(0.803,{Logistic Regression (AUPR/AUPRC)})
+(0.596,{Patient Forest (AUPR/AUPRC)})
+(0.126,{XGBoost (AUPR/AUPRC)})
+(0.114,{Random Forest (AP)})
+(0.113,{XGBoost (AP)})
+(0.080,{Ensemble (AP)})
+(0.080,{Logistic Regression (AP)})
+(0.067,{AdaBoost (AP)})
+(0.063,{Neural Network (AP)})
+    };
+
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, black}]
+    coordinates {
+(0.853,{CTCL (AUPR/AUPRC)}) +- (0.0416,0)
+(0.834,{Transformer (AUPR/AUPRC)}) +- (0.0446,0)
+(0.829,{Random Forest (AUPR/AUPRC)}) +- (0.0517,0)
+(0.803,{Logistic Regression (AUPR/AUPRC)}) +- (0.0792,0)
+(0.596,{Patient Forest (AUPR/AUPRC)}) +- (0.0339,0)
+(0.126,{XGBoost (AUPR/AUPRC)}) +- (0.0627,0)
+(0.114,{Random Forest (AP)}) +- (0.0519,0)
+(0.113,{XGBoost (AP)}) +- (0.0568,0)
+(0.080,{Ensemble (AP)}) +- (0.0588,0)
+(0.080,{Logistic Regression (AP)}) +- (0.0588,0)
+(0.067,{AdaBoost (AP)}) +- (0.0588,0)
+(0.063,{Neural Network (AP)}) +- (0.0588,0)
+    };
+
+\legend{Efecto combinado (efectos aleatorios), IC 95\%}
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot global PR: efecto combinado de m\u00e9tricas Precision-Recall 
+por tipo de modelo y familia m\u00e9trica (AP vs AUPRC/AUPR) 
+(modelo de efectos aleatorios con ponderaci\u00f3n por inversa de varianza).}
+\label{fig:fp_global_pr}
+\end{figure}
+
+\newpage
+\subsection{Forest Plots Individuales por Modelo (PR)}
+
+\subsection{Patient Forest (AUPR/AUPRC) (3 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.4cm,
+    symbolic y coords={
+        {Khodadadi 2023 / Mort. (MIMIC)},
+        {Khodadadi 2023 / Mort. (eICU)},
+        {Khodadadi 2023 / Readm. (eICU)},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.45, xmax=0.75,
+    xlabel={AUPRC / AP},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{Patient Forest (AUPR/AUPRC)}},
+    title style={font=\normalsize},
+]
+
+% Entradas con IC 95%
+\addplot[only marks, mark=square*, fill=green!70, mark size=3.5pt, draw=green!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, green!50}]
+    coordinates {
+(0.619,{Khodadadi 2023 / Mort. (MIMIC)}) +- (0.0588,0)
+(0.573,{Khodadadi 2023 / Mort. (eICU)}) +- (0.0588,0)
+(0.595,{Khodadadi 2023 / Readm. (eICU)}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=green!70, mark size=5pt, draw=green!90]
+    coordinates {(0.596,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, green!70}]
+    coordinates {(0.596,{Efecto combinado}) +- (0.0339,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot PR --- Patient Forest (AUPR/AUPRC). Efecto combinado: 0.596 (IC~95\%: 0.562--0.630).}
+\end{figure}
+
+\subsection{XGBoost (AUPR/AUPRC) (3 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.4cm,
+    symbolic y coords={
+        {Thoral 2021 / Mort.},
+        {Thoral 2021 / Readm.},
+        {Thoral 2021 / Readm./Mort.},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.00, xmax=0.30,
+    xlabel={AUPRC / AP},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{XGBoost (AUPR/AUPRC)}},
+    title style={font=\normalsize},
+]
+
+% Entradas con IC 95%
+\addplot[only marks, mark=square*, fill=green!70, mark size=3.5pt, draw=green!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, green!50}]
+    coordinates {
+(0.086,{Thoral 2021 / Mort.}) +- (0.0588,0)
+(0.102,{Thoral 2021 / Readm.}) +- (0.0588,0)
+(0.189,{Thoral 2021 / Readm./Mort.}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=green!70, mark size=5pt, draw=green!90]
+    coordinates {(0.126,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, green!70}]
+    coordinates {(0.126,{Efecto combinado}) +- (0.0627,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot PR --- XGBoost (AUPR/AUPRC). Efecto combinado: 0.126 (IC~95\%: 0.063--0.188).}
+\end{figure}
+
+\subsection{CTCL (AUPR/AUPRC) (2 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.0cm,
+    symbolic y coords={
+        {Sun 2024 / Mort. (eICU)},
+        {Sun 2024 / Readm. (eICU)},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.70, xmax=1.00,
+    xlabel={AUPRC / AP},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{CTCL (AUPR/AUPRC)}},
+    title style={font=\normalsize},
+]
+
+\draw[orange!70, dashed, thin] (axis cs:0.80,{Sun 2024 / Mort. (eICU)}) -- (axis cs:0.80,Efecto combinado);
+
+% Entradas con IC 95%
+\addplot[only marks, mark=square*, fill=green!70, mark size=3.5pt, draw=green!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, green!50}]
+    coordinates {
+(0.837,{Sun 2024 / Mort. (eICU)}) +- (0.0588,0)
+(0.869,{Sun 2024 / Readm. (eICU)}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=green!70, mark size=5pt, draw=green!90]
+    coordinates {(0.853,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, green!70}]
+    coordinates {(0.853,{Efecto combinado}) +- (0.0416,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot PR --- CTCL (AUPR/AUPRC). Efecto combinado: 0.853 (IC~95\%: 0.811--0.895).}
+\end{figure}
+
+\subsection{Transformer (AUPR/AUPRC) (2 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.0cm,
+    symbolic y coords={
+        {Sun 2024 / Mort. (eICU)},
+        {Sun 2024 / Readm. (eICU)},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.70, xmax=1.00,
+    xlabel={AUPRC / AP},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{Transformer (AUPR/AUPRC)}},
+    title style={font=\normalsize},
+]
+
+\draw[orange!70, dashed, thin] (axis cs:0.80,{Sun 2024 / Mort. (eICU)}) -- (axis cs:0.80,Efecto combinado);
+
+% Entradas con IC 95%
+\addplot[only marks, mark=square*, fill=green!70, mark size=3.5pt, draw=green!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, green!50}]
+    coordinates {
+(0.811,{Sun 2024 / Mort. (eICU)}) +- (0.0588,0)
+(0.857,{Sun 2024 / Readm. (eICU)}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=green!70, mark size=5pt, draw=green!90]
+    coordinates {(0.834,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, green!70}]
+    coordinates {(0.834,{Efecto combinado}) +- (0.0446,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot PR --- Transformer (AUPR/AUPRC). Efecto combinado: 0.834 (IC~95\%: 0.790--0.879).}
+\end{figure}
+
+\subsection{Random Forest (AUPR/AUPRC) (2 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.0cm,
+    symbolic y coords={
+        {Sun 2024 / Mort. (eICU)},
+        {Sun 2024 / Readm. (eICU)},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.65, xmax=1.00,
+    xlabel={AUPRC / AP},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{Random Forest (AUPR/AUPRC)}},
+    title style={font=\normalsize},
+]
+
+\draw[orange!70, dashed, thin] (axis cs:0.80,{Sun 2024 / Mort. (eICU)}) -- (axis cs:0.80,Efecto combinado);
+
+% Entradas con IC 95%
+\addplot[only marks, mark=square*, fill=green!70, mark size=3.5pt, draw=green!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, green!50}]
+    coordinates {
+(0.802,{Sun 2024 / Mort. (eICU)}) +- (0.0588,0)
+(0.855,{Sun 2024 / Readm. (eICU)}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=green!70, mark size=5pt, draw=green!90]
+    coordinates {(0.829,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, green!70}]
+    coordinates {(0.829,{Efecto combinado}) +- (0.0517,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot PR --- Random Forest (AUPR/AUPRC). Efecto combinado: 0.829 (IC~95\%: 0.777--0.881).}
+\end{figure}
+
+\subsection{Logistic Regression (AUPR/AUPRC) (2 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.0cm,
+    symbolic y coords={
+        {Sun 2024 / Mort. (eICU)},
+        {Sun 2024 / Readm. (eICU)},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.65, xmax=1.00,
+    xlabel={AUPRC / AP},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{Logistic Regression (AUPR/AUPRC)}},
+    title style={font=\normalsize},
+]
+
+\draw[orange!70, dashed, thin] (axis cs:0.80,{Sun 2024 / Mort. (eICU)}) -- (axis cs:0.80,Efecto combinado);
+
+% Entradas con IC 95%
+\addplot[only marks, mark=square*, fill=green!70, mark size=3.5pt, draw=green!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, green!50}]
+    coordinates {
+(0.762,{Sun 2024 / Mort. (eICU)}) +- (0.0588,0)
+(0.843,{Sun 2024 / Readm. (eICU)}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=green!70, mark size=5pt, draw=green!90]
+    coordinates {(0.803,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, green!70}]
+    coordinates {(0.803,{Efecto combinado}) +- (0.0792,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot PR --- Logistic Regression (AUPR/AUPRC). Efecto combinado: 0.803 (IC~95\%: 0.724--0.882).}
+\end{figure}
+
+\subsection{Random Forest (AP) (2 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.0cm,
+    symbolic y coords={
+        {Tschoellitsch 2024 / Readm./Mort.},
+        {Tschoellitsch 2024 / Readm./Mort. (ext.)},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.00, xmax=0.25,
+    xlabel={AUPRC / AP},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{Random Forest (AP)}},
+    title style={font=\normalsize},
+]
+
+% Entradas con IC 95%
+\addplot[only marks, mark=square*, fill=green!70, mark size=3.5pt, draw=green!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, green!50}]
+    coordinates {
+(0.087,{Tschoellitsch 2024 / Readm./Mort.}) +- (0.0588,0)
+(0.140,{Tschoellitsch 2024 / Readm./Mort. (ext.)}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=green!70, mark size=5pt, draw=green!90]
+    coordinates {(0.114,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, green!70}]
+    coordinates {(0.114,{Efecto combinado}) +- (0.0519,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot PR --- Random Forest (AP). Efecto combinado: 0.114 (IC~95\%: 0.062--0.165).}
+\end{figure}
+
+\subsection{XGBoost (AP) (2 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.0cm,
+    symbolic y coords={
+        {Tschoellitsch 2024 / Readm./Mort.},
+        {Tschoellitsch 2024 / Readm./Mort. (ext.)},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.00, xmax=0.30,
+    xlabel={AUPRC / AP},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{XGBoost (AP)}},
+    title style={font=\normalsize},
+]
+
+% Entradas con IC 95%
+\addplot[only marks, mark=square*, fill=green!70, mark size=3.5pt, draw=green!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, green!50}]
+    coordinates {
+(0.084,{Tschoellitsch 2024 / Readm./Mort.}) +- (0.0588,0)
+(0.142,{Tschoellitsch 2024 / Readm./Mort. (ext.)}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=green!70, mark size=5pt, draw=green!90]
+    coordinates {(0.113,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, green!70}]
+    coordinates {(0.113,{Efecto combinado}) +- (0.0568,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot PR --- XGBoost (AP). Efecto combinado: 0.113 (IC~95\%: 0.056--0.170).}
+\end{figure}
+
+\subsection{Ensemble (AP) (1 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.0cm,
+    symbolic y coords={
+        {Tschoellitsch 2024 / Readm./Mort.},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.00, xmax=0.20,
+    xlabel={AUPRC / AP},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{Ensemble (AP)}},
+    title style={font=\normalsize},
+]
+
+% Entradas con IC 95%
+\addplot[only marks, mark=square*, fill=green!70, mark size=3.5pt, draw=green!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, green!50}]
+    coordinates {
+(0.080,{Tschoellitsch 2024 / Readm./Mort.}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=green!70, mark size=5pt, draw=green!90]
+    coordinates {(0.080,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, green!70}]
+    coordinates {(0.080,{Efecto combinado}) +- (0.0588,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot PR --- Ensemble (AP). Efecto combinado: 0.080 (IC~95\%: 0.021--0.139).}
+\end{figure}
+
+\subsection{Logistic Regression (AP) (1 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.0cm,
+    symbolic y coords={
+        {Tschoellitsch 2024 / Readm./Mort.},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.00, xmax=0.20,
+    xlabel={AUPRC / AP},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{Logistic Regression (AP)}},
+    title style={font=\normalsize},
+]
+
+% Entradas con IC 95%
+\addplot[only marks, mark=square*, fill=green!70, mark size=3.5pt, draw=green!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, green!50}]
+    coordinates {
+(0.080,{Tschoellitsch 2024 / Readm./Mort.}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=green!70, mark size=5pt, draw=green!90]
+    coordinates {(0.080,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, green!70}]
+    coordinates {(0.080,{Efecto combinado}) +- (0.0588,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot PR --- Logistic Regression (AP). Efecto combinado: 0.080 (IC~95\%: 0.021--0.139).}
+\end{figure}
+
+\subsection{AdaBoost (AP) (1 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.0cm,
+    symbolic y coords={
+        {Tschoellitsch 2024 / Readm./Mort.},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.00, xmax=0.20,
+    xlabel={AUPRC / AP},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{AdaBoost (AP)}},
+    title style={font=\normalsize},
+]
+
+% Entradas con IC 95%
+\addplot[only marks, mark=square*, fill=green!70, mark size=3.5pt, draw=green!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, green!50}]
+    coordinates {
+(0.067,{Tschoellitsch 2024 / Readm./Mort.}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=green!70, mark size=5pt, draw=green!90]
+    coordinates {(0.067,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, green!70}]
+    coordinates {(0.067,{Efecto combinado}) +- (0.0588,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot PR --- AdaBoost (AP). Efecto combinado: 0.067 (IC~95\%: 0.008--0.126).}
+\end{figure}
+
+\subsection{Neural Network (AP) (1 entradas, 1 estudios)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+    width=15cm, height=3.0cm,
+    symbolic y coords={
+        {Tschoellitsch 2024 / Readm./Mort.},
+        Efecto combinado
+    },
+    ytick=data,
+    y dir=reverse,
+    xmin=0.00, xmax=0.20,
+    xlabel={AUPRC / AP},
+    xlabel style={font=\small\bfseries},
+    yticklabel style={font=\scriptsize, text width=5.5cm, align=right},
+    xticklabel style={font=\small},
+    grid=major,
+    grid style={dashed, gray!20},
+    axis lines=left,
+    enlarge y limits=0.12,
+    title={\textbf{Neural Network (AP)}},
+    title style={font=\normalsize},
+]
+
+% Entradas con IC 95%
+\addplot[only marks, mark=square*, fill=green!70, mark size=3.5pt, draw=green!90,
+    error bars/.cd, x dir=both, x explicit, error bar style={thin, green!50}]
+    coordinates {
+(0.063,{Tschoellitsch 2024 / Readm./Mort.}) +- (0.0588,0)
+    };
+
+% Efecto combinado
+\addplot[only marks, mark=diamond*, fill=green!70, mark size=5pt, draw=green!90]
+    coordinates {(0.063,{Efecto combinado})};
+\addplot[only marks, mark=none, forget plot,
+    error bars/.cd, x dir=both, x explicit, error bar style={thick, green!70}]
+    coordinates {(0.063,{Efecto combinado}) +- (0.0588,0)};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Forest Plot PR --- Neural Network (AP). Efecto combinado: 0.063 (IC~95\%: 0.004--0.122).}
+\end{figure}
+
+\newpage
+\section{Tablas Resumen}
+\textit{Ver documento completo para tablas resumen de modelos.}
+
+\section{Referencias}
+\begin{enumerate}
+\item Estudios incluidos en la revisión sistemática PRISMA 2020.
+\end{enumerate}
+
+\end{document}
