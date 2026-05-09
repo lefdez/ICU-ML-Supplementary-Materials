@@ -26,7 +26,7 @@ Scopus: 1751,
 Web of Science (WOS):1037, 
 PubMed:1083,
 IEEE Xplore:228, 
-Artículos identificados en otras fuentes (literatura gris, referencias): 33
+Artículos identificados en otras fuentes (literatura gris, referencias): 6
 
 
 ## Search Strategy (PRISMA Item 7)
