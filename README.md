@@ -3,7 +3,7 @@
 **A Systematic Review and Meta-Analysis**
 
 > Fernandez-Curbelo, L.E.; Rivero-Blanco, T.; Cruz Corona, C.; Zwir, I.  
-> *Journal of Clinical Medicine* (submitted, 2026)
+> (submitted, 2026)
 
 ---
 
