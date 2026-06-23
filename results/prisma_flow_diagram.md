@@ -14,7 +14,7 @@
 - **Total records before screening:** 4101
 - **Records removed before screening:**
   - Duplicate records: 1795
-  - Records marked as ineligible by automation tools: 97
+  - Records marked as ineligible by predefined eligibility checks: 97
 - **Records screened:** 2213
 - **Records excluded:** 2200
 
@@ -28,4 +28,4 @@
 - **Total studies included in review:** 8
 
 ---
-*PRISMA Flow Diagram generated: 4/3/2026 12:31:27 AM*
+*Version for supplementary submission (curated content).* 

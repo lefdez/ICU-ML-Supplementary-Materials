@@ -53,4 +53,4 @@ Estudios no relacionados con el aprendizaje automático o la inteligencia artifi
 **Format:** IEEE
 
 ---
-*Document generated: 3/31/2026 10:22:41 PM*
+*Version for supplementary submission (curated content).* 

@@ -14,4 +14,4 @@ Summary of performance metrics reported by each study.
 | Curth, Alicia (2020) | 0.800 (0.005) | Not reported | Not reported | Not reported | Not reported |
 
 ---
-*Generated: 4/3/2026 12:32:09 AM*
+*Version for supplementary submission (curated content).* 
