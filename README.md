@@ -3,7 +3,7 @@
 **A Systematic Review and Meta-Analysis**
 
 > Fernandez-Curbelo, L.E.; Rivero-Blanco, T.; Cruz Corona, C.; Zwir, I.  
-> *Journal of Clinical Medicine* (submitted, 2026)
+> *Big Data and Cognitive Computing (BDCC)* (submitted, 2026)
 
 ---
 
@@ -59,6 +59,7 @@ The review synthesizes evidence from 8 studies (2020–2025) that simultaneously
 │       └── tabla_subanalisis_pr.tex        # Subanalysis AP vs AUC-PRC
 ├── supplementary/
 │   └── graphical_abstract.png       # Graphical abstract for the manuscript
+│   └── PRISMA_2020_checklist_completed.md # Completed PRISMA 2020 checklist (Items 1-27)
 └── references/
     ├── references.bib               # BibTeX bibliography (60+ references)
     └── references.ris               # RIS format for reference managers
@@ -78,6 +79,7 @@ Structured JSON database containing all extracted predictive performance metrics
 ### Results files
 
 - **PRISMA flow diagram**: Full identification → screening → eligibility → inclusion counts.
+- **Completed PRISMA checklist**: Explicit mapping of PRISMA 2020 items to the final manuscript sections.
 - **Study characteristics**: Population, setting, sample size, ML models, outcomes, validation approach for each of the 8 studies.
 - **Risk of bias**: PROBAST assessment across 5 domains (participants, predictors, outcome, analysis, overall) for all 8 studies.
 - **Individual results**: Per-study performance metrics including AUC-ROC, AUC-PRC, sensitivity, specificity, accuracy, F1-Score.
@@ -129,7 +131,7 @@ If you use these materials, please cite:
              Mortality in the ICU: A Systematic Review and Meta-Analysis},
   author  = {Fernandez-Curbelo, Luis E. and Rivero-Blanco, Tania and
              Cruz Corona, Carlos and Zwir, Igor},
-  journal = {Journal of Clinical Medicine},
+   journal = {Big Data and Cognitive Computing},
   year    = {2026},
   note    = {Submitted}
 }
