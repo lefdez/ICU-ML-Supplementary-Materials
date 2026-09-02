@@ -4,6 +4,75 @@ All notable changes to this repository are documented here. This project accompa
 manuscript under peer review; this changelog exists so that any reader can see exactly what
 changed between releases and why, alongside the immutable git tags for each version.
 
+## [v1.2.0] — 2026-09-02
+
+Full-English-language pass and a public-release readiness review, prompted by a request to
+confirm this repository is free of residual Spanish text and to assess journal-copyright
+readiness before any further public update.
+
+### Language normalization
+- `protocol/protocol_study.md`: fully translated to English (title, research question, PICO
+  framework, eligibility criteria, and the "Registration and Public Availability" section added
+  in v1.1.0 — same argument, translated, not reworded).
+- `data/extracted_models.json` (renamed from `data/modelos_extraidos.json`, see below): field
+  names translated (`estudio_id`→`study_id`, `pdf_nombre`→`pdf_name`, `modelo`→`model`,
+  `tarea`→`task`, `contexto`→`context`), and the Spanish values of `task`, `cohort_label`, and
+  `outcome_note` translated across all 78 records, using the same English terminology already
+  established for these studies in the main manuscript's own supplementary material. All
+  numeric fields are byte-identical to the previous version (verified field-by-field before
+  writing). **This intentionally diverges from the internal working copy of this dataset kept in
+  the primary manuscript repository, which remains in Spanish because it feeds that repository's
+  own analysis pipeline** — the numeric content is identical; only this repository's copy has
+  translated metadata, for readers of the public supplementary materials.
+- `results/tables/study_detail_table.tex`, `study_detail_table_pr.tex`,
+  `model_subgroup_table.tex`, `pr_subgroup_table.tex` (renamed, see below): column headers, row
+  labels, and footnotes translated to English, using the exact terminology already validated in
+  the equivalent English tables in the main manuscript. All numeric values are unchanged.
+- `supplementary/PRISMA_2020_checklist_completed.md` and
+  `results/forest_plots/forest_plots_by_model.tex`: reworded two sentences that named
+  Spanish-language file names from the primary manuscript repository (`articulo_bdcc.tex`, the
+  original model-only figure-generation script) by description instead of by their literal
+  (Spanish) file names — those files themselves are out of scope and are not being renamed.
+
+### File renames (content already covered above)
+- `data/modelos_extraidos.json` → `data/extracted_models.json`
+- `results/tables/tabla_detalle_estudios.tex` → `results/tables/study_detail_table.tex`
+- `results/tables/tabla_detalle_estudios_pr.tex` → `results/tables/study_detail_table_pr.tex`
+- `results/tables/tabla_subanalisis_ml.tex` → `results/tables/model_subgroup_table.tex`
+- `results/tables/tabla_subanalisis_pr.tex` → `results/tables/pr_subgroup_table.tex`
+- `results/forest_plots/forest_plots_por_modelo_latex.tex` →
+  `results/forest_plots/forest_plots_by_model.tex`
+
+All cross-references to these six files in `README.md` and in this changelog's own v1.1.0 entry
+were updated accordingly.
+
+### Documented exception (not changed)
+- `supplementary/studies_screening/screening_results_2026-05-09.csv`: the `Reason_Criteria`
+  column remains in Spanish across all 2,213 rows. This was evaluated and deliberately left
+  untranslated in this release, to avoid risking the scientific fidelity of a high-volume,
+  unreviewed mechanical translation of screening justifications. Translating this column is
+  tracked as a separate, future task.
+
+### Copyright and public-release readiness review
+A review was conducted of MDPI/BDCC's copyright and open-access policy, and of third-party
+rights exposure within this repository, ahead of any further public update. Summary:
+- No blocking issue was found for publishing this repository's pending updates. MDPI/BDCC
+  operates under CC BY (authors retain copyright), the `LICENSE` and this repository's license
+  section apply only to the authors' own original material, and no MDPI-typeset content,
+  branding, or PDF is tracked in this repository. The "submitted" status of the manuscript is
+  disclosed clearly and consistently throughout.
+- A genuine, pre-existing gray area was identified and deliberately left unchanged: this
+  repository's screening CSV (all 2,213 rows) and 35 entries in `references/references.bib`
+  retain full verbatim abstract text exported from Scopus, Web of Science, IEEE Xplore, and
+  PubMed. This is not an MDPI policy issue but a potential third-party database/publisher
+  terms-of-use consideration. It reflects common practice in publicly shared systematic-review
+  screening records, with no known enforcement precedent in this space, and has already been
+  public since the v1.0.0 release with no apparent issue; it is intentionally not addressed in
+  this release.
+- Not independently verifiable with text-based tools: the authors should personally confirm that
+  `supplementary/graphical_abstract.png` is original artwork and does not carry any MDPI/BDCC
+  template, logo, or watermark.
+
 ## [v1.1.0] — 2026-09-02
 
 Synchronization with the post-review correction round applied to the manuscript during peer
@@ -44,15 +113,18 @@ methodological review. Nothing in this repository was changed independently of t
   publication bias is applied.
 
 ### Documents affected
-- `results/tables/tabla_detalle_estudios.tex`: added the standard-error tier column
-  (Reported / Hanley–McNeil), added confidence intervals to all rows, and marked Sun M. et al.'s
-  10 rows as excluded from pooling (previously presented as ordinary data rows).
-- `results/tables/tabla_subanalisis_ml.tex`: rebuilt from a model-only grouping (which mixed
-  outcomes in most rows) to the 15 model×outcome strata described above.
-- `results/tables/tabla_subanalisis_pr.tex`: Sun M. et al.'s four AUC-PRC model rows (CTCL,
-  Transformer, RF, LR) are now split into 8 outcome-level descriptive rows instead of 4 combined
-  ("pooled") rows.
-- `results/forest_plots/forest_plots_por_modelo_latex.tex`: rebuilt to match the corrected
+- `results/tables/study_detail_table.tex` (then named `tabla_detalle_estudios.tex`; renamed in
+  v1.2.0, see below): added the standard-error tier column (Reported / Hanley–McNeil), added
+  confidence intervals to all rows, and marked Sun M. et al.'s 10 rows as excluded from pooling
+  (previously presented as ordinary data rows).
+- `results/tables/model_subgroup_table.tex` (then named `tabla_subanalisis_ml.tex`): rebuilt
+  from a model-only grouping (which mixed outcomes in most rows) to the 15 model×outcome strata
+  described above.
+- `results/tables/pr_subgroup_table.tex` (then named `tabla_subanalisis_pr.tex`): Sun M. et al.'s
+  four AUC-PRC model rows (CTCL, Transformer, RF, LR) are now split into 8 outcome-level
+  descriptive rows instead of 4 combined ("pooled") rows.
+- `results/forest_plots/forest_plots_by_model.tex` (then named
+  `forest_plots_por_modelo_latex.tex`): rebuilt to match the corrected
   forest plots now used in the manuscript's own supplementary material — row labels that
   previously failed to render for some "Sun 2024 / ..." and "Pooled: ..." categories are fixed;
   marker size is now proportional to each estimate's inverse-variance weight within its pooling
@@ -91,12 +163,13 @@ does not change the protocol's content — no amendments were made to it relativ
 reported in the manuscript.
 
 ### Not changed
-- The dataset `data/modelos_extraidos.json` is unchanged (already consistent with the current
-  manuscript).
+- The dataset (then `data/modelos_extraidos.json`, renamed to `data/extracted_models.json` in
+  v1.2.0) was unchanged in this release (already consistent with the current manuscript).
 - `results/risk_of_bias_assessment.md` is unchanged (already consistent: 3 low risk, 5 some
   concerns, 0 high risk, matching the manuscript's PROBAST assessment).
-- `results/tables/tabla_detalle_estudios_pr.tex` (AUC-PRC study-level detail) is unchanged
-  (already consistent — this table was not affected by the AUC-ROC pooling changes).
+- `results/tables/study_detail_table_pr.tex` (then named `tabla_detalle_estudios_pr.tex`;
+  AUC-PRC study-level detail) is unchanged in this release (already consistent — this table was
+  not affected by the AUC-ROC pooling changes).
 - `references/references.ris` is unchanged. It was already out of sync with `references.bib`
   before this release and remains so; regenerating it is tracked as a separate, outstanding task
   that also affects the primary manuscript repository and is out of scope for this release.

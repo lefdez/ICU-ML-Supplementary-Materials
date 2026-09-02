@@ -4,7 +4,7 @@ Manuscript: Machine Learning Models for Predicting Unplanned Readmission and Mor
 Target journal: Big Data and Cognitive Computing (BDCC)
 Status: Submitted (2026)
 
-This checklist maps PRISMA 2020 items to the corresponding sections in the final manuscript (`articulo_bdcc.tex`).
+This checklist maps PRISMA 2020 items to the corresponding sections in the final manuscript's LaTeX source.
 
 | Section/Topic | Item | Checklist Item (short) | Addressed in Manuscript |
 |---|---:|---|---|

@@ -1,11 +1,11 @@
 \begin{table}[H]
 \centering
-\caption{Subanálisis de métricas basadas en precision-recall, separando AP de la familia AUPR/AUPRC (modelo de efectos aleatorios).}\label{tab:subgroup_pr}
+\caption{Precision--recall subanalysis separating AP from the AUPR/AUPRC family (random-effects model).}\label{tab:subgroup_pr}
 \small
 \begin{adjustbox}{max width=\textwidth}
 \begin{tabular}{llcccccccc}
 \toprule
-\textbf{Tipo PR} & \textbf{Modelo} & \textbf{N Estudios} & \textbf{N Entr.} & \textbf{Readm. (ev/N)} & \textbf{Mort. (ev/N)} & \textbf{Comp. (ev/N)} & \textbf{Efecto combinado} & \textbf{IC 95\%} & \textbf{I\textsuperscript{2}} \\
+\textbf{PR type} & \textbf{Model} & \textbf{N Studies} & \textbf{N Entries} & \textbf{Readm. (ev/N)} & \textbf{Mort. (ev/N)} & \textbf{Comp. (ev/N)} & \textbf{Pooled effect} & \textbf{95\% CI} & \textbf{I\textsuperscript{2}} \\
 \midrule
     AP & Random Forest & 1 & 2 & --- & --- & 3,183/74,839 & 0.114 & 0.062--0.165 & 35.9\% \\
     AP & XGBoost & 1 & 2 & --- & --- & 3,183/74,839 & 0.113 & 0.056--0.170 & 46.5\% \\
@@ -26,5 +26,5 @@
 \bottomrule
 \end{tabular}
 \end{adjustbox}
-\par\vspace{0.4em}\footnotesize La familia AUPR/AUPRC agrupa etiquetas equivalentes de área bajo la curva precision-recall. AP se mantiene por separado por no ser directamente intercambiable con AUPR en todos los contextos. * eventos estimados a partir de incidencias reportadas; NR = no reportado en el artículo original. $^\dagger$Sun M. et al. (2024) es la única fuente para este modelo; mortalidad y readmisión se mantienen como filas descriptivas separadas ($k=1$, sin efecto combinado ni IC) en vez de combinarse, siguiendo el mismo criterio de estratificación por desenlace ya aplicado a las estimaciones de AUC-ROC de este estudio. Estos valores no deben compararse sin más con los de las demás filas (ver limitaciones sobre la prevalencia de evaluación de Sun M. et al. en el manuscrito principal).
+\par\vspace{0.4em}\footnotesize The AUPR/AUPRC family groups equivalent area-under-the-precision-recall-curve labels. AP is kept separately because it is not directly interchangeable with AUPR in all contexts. * Events estimated from reported incidences; NR = not reported in the original article. $^\dagger$Sun M. et al. (2024) is the sole source for this model; mortality and readmission are kept as separate descriptive rows ($k=1$, no pooled effect or CI) rather than combined, following the same outcome-stratification principle already applied to this study's AUC-ROC estimates. These values should not be compared at face value to the other rows (see the discussion of Sun M. et al.'s evaluation prevalence in the main manuscript).
 \end{table}

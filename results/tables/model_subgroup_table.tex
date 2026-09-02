@@ -1,0 +1,29 @@
+\begin{table}[H]
+\centering
+\caption{AUC-ROC subanalysis by model and outcome (only strata with two or more contributing estimates).}\label{tab:subgroup_ml}
+\small
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llccccc}
+\toprule
+\textbf{Model} & \textbf{Outcome} & \textbf{N Studies} & \textbf{N Metrics} & \textbf{ev/N} & \textbf{Pooled effect (95\% CI)} & \textbf{I\textsuperscript{2}} \\
+\midrule
+    Transformer & Mortality & 1 & 5 & 7,606/63,370 & 0.956 (0.923--0.975) & 98.5\% \\
+    Patient Forest & Mortality & 1 & 2 & 8,360/91,417 & 0.834 (0.763--0.887) & 96.4\% \\
+    XGBoost & Mortality & 3 & 4 & 9,565/108,020 & 0.823 (0.768--0.868) & 96.1\% \\
+    Logistic Regression & Mortality & 2 & 3 & 8,434/95,346 & 0.816 (0.761--0.860) & 92.2\% \\
+    Random Forest & Mortality & 2 & 3 & 8,434/95,346 & 0.815 (0.748--0.868) & 94.8\% \\
+    SVM & Mortality & 2 & 3 & 8,434/95,346 & 0.812 (0.722--0.877) & 96.9\% \\
+    Logistic Regression & Readmission & 2 & 2 & 7,240/44,955 & 0.785 (0.702--0.850) & 93.1\% \\
+    Neural Network & Mortality & 1 & 2 & 8,360/91,417 & 0.784 (0.711--0.842) & 96.2\% \\
+    SVM & Readmission & 2 & 2 & 7,240/44,955 & 0.782 (0.686--0.855) & 94.7\% \\
+    Random Forest & Readmission & 2 & 2 & 7,240/44,955 & 0.780 (0.696--0.846) & 93.1\% \\
+    XGBoost & Readmission & 3 & 3 & 7,853/57,629 & 0.766 (0.713--0.812) & 92.9\% \\
+    Logistic Regression & Composite & 3 & 4 & 1,592*/36,481 & 0.757 (0.717--0.794) & 78.7\% \\
+    Gradient Boosting & Composite & 3 & 9 & 8,095*/125,925 & 0.738 (0.721--0.754) & 81.0\% \\
+    Random Forest & Composite & 2 & 3 & 3,446/78,768 & 0.716 (0.606--0.806) & 95.9\% \\
+    XGBoost & Composite & 2 & 3 & 3,446/78,768 & 0.711 (0.609--0.796) & 95.3\% \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\vspace{0.4em}\footnotesize * Events estimated from reported incidences rather than reported directly; confidence intervals derived from these counts are approximate despite being displayed to three decimals. Only the 15 model$\times$outcome strata with two or more contributing estimates are shown, so that no row pools different outcomes (mortality, readmission, or composite) within the same model, following the same principle already applied to Shickel et al.'s four mortality horizons. This is the main revision from the previous version of this table, which grouped only by model and mixed outcomes in 12 of 13 poolable rows. The 18 model$\times$outcome combinations with only one contributing estimate (e.g., GRU and GRU + Attention, each with one mortality and one readmission estimate from Shickel et al.) and the 2 combinations contributed only by Sun M. et al. (2024) (CTCL, excluded from pooling; see the detail-table note) are not pooled here; their individual values are reported in Table~\ref{tab:detalle_auc}.
+\end{table}

@@ -1,0 +1,92 @@
+\begin{table}[H]
+\centering
+\caption{AUC-ROC detail by study, model, and predictive task.}\label{tab:detalle_auc}
+\scriptsize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llllll}
+\toprule
+\textbf{Study} & \textbf{Model} & \textbf{Task} & \textbf{Events/N} & \textbf{AUC-ROC (95\% CI)} & \textbf{SE tier} \\
+\midrule
+    Curth et al. (2020) & Gradient Boosting & Readm./Mort. (ETZ) & 811*/13,300 & 0.751 (0.731--0.771) & Hanley--McNeil \\
+    Curth et al. (2020) & Gradient Boosting & Readm./Mort. (Epic) & 208*/2,847 & 0.746 (0.707--0.785) & Hanley--McNeil \\
+    Curth et al. (2020) & Logistic Regression & Readm./Mort. (ETZ) & 811*/13,300 & 0.745 (0.725--0.765) & Hanley--McNeil \\
+    Curth et al. (2020) & Logistic Regression & Readm./Mort. (Epic) & 208*/2,847 & 0.800 (0.763--0.837) & Hanley--McNeil \\
+    Thoral et al. (2021) & LightGBM & Mortality & 74/3,929 & 0.839 (0.782--0.895) & Reported \\
+    Thoral et al. (2021) & LightGBM & Readmission & 189/3,929 & 0.724 (0.682--0.766) & Reported \\
+    Thoral et al. (2021) & LightGBM & Readm./Mort. & 263/3,929 & 0.776 (0.742--0.809) & Reported \\
+    Thoral et al. (2021) & Logistic Regression & Mortality & 74/3,929 & 0.849 (0.793--0.904) & Reported \\
+    Thoral et al. (2021) & Logistic Regression & Readmission & 189/3,929 & 0.743 (0.702--0.784) & Reported \\
+    Thoral et al. (2021) & Logistic Regression & Readm./Mort. & 263/3,929 & 0.783 (0.749--0.816) & Reported \\
+    Thoral et al. (2021) & Random Forest & Mortality & 74/3,929 & 0.845 (0.789--0.901) & Reported \\
+    Thoral et al. (2021) & Random Forest & Readmission & 189/3,929 & 0.737 (0.695--0.778) & Reported \\
+    Thoral et al. (2021) & Random Forest & Readm./Mort. & 263/3,929 & 0.780 (0.746--0.813) & Reported \\
+    Thoral et al. (2021) & SVM & Mortality & 74/3,929 & 0.836 (0.779--0.893) & Reported \\
+    Thoral et al. (2021) & SVM & Readmission & 189/3,929 & 0.734 (0.692--0.775) & Reported \\
+    Thoral et al. (2021) & SVM & Readm./Mort. & 263/3,929 & 0.789 (0.756--0.822) & Reported \\
+    Thoral et al. (2021) & XGBoost & Mortality & 74/3,929 & 0.834 (0.777--0.891) & Reported \\
+    Thoral et al. (2021) & XGBoost & Readmission & 189/3,929 & 0.715 (0.673--0.757) & Reported \\
+    Thoral et al. (2021) & XGBoost & Readm./Mort. & 263/3,929 & 0.780 (0.747--0.814) & Reported \\
+    Shickel et al. (2022) & CatBoost & In-hosp. Mort. & 1,131/12,674 & 0.901 (0.889--0.913) & Hanley--McNeil \\
+    Shickel et al. (2022) & CatBoost & Readmission & 613/12,674 & 0.759 (0.737--0.781) & Hanley--McNeil \\
+    Shickel et al. (2022) & GRU & In-hosp. Mort. & 1,131/12,674 & 0.960 (0.952--0.968) & Hanley--McNeil \\
+    Shickel et al. (2022) & GRU & Readmission & 613/12,674 & 0.750 (0.727--0.773) & Hanley--McNeil \\
+    Shickel et al. (2022) & GRU + Attention & In-hosp. Mort. & 1,131/12,674 & 0.965 (0.957--0.973) & Hanley--McNeil \\
+    Shickel et al. (2022) & GRU + Attention & Readmission & 613/12,674 & 0.770 (0.748--0.792) & Hanley--McNeil \\
+    Shickel et al. (2022) & Transformer & Mortality 1y & 2,288/12,674 & 0.892 (0.883--0.901) & Hanley--McNeil \\
+    Shickel et al. (2022) & Transformer & Mortality 30d & 1,380/12,674 & 0.953 (0.945--0.961) & Hanley--McNeil \\
+    Shickel et al. (2022) & Transformer & Mortality 7d & 1,022/12,674 & 0.983 (0.977--0.989) & Hanley--McNeil \\
+    Shickel et al. (2022) & Transformer & Mortality 90d & 1,785/12,674 & 0.923 (0.914--0.932) & Hanley--McNeil \\
+    Shickel et al. (2022) & Transformer & In-hosp. Mort. & 1,131/12,674 & 0.978 (0.972--0.984) & Hanley--McNeil \\
+    Shickel et al. (2022) & Transformer & Readmission & 613/12,674 & 0.843 (0.823--0.863) & Hanley--McNeil \\
+    Shickel et al. (2022) & XGBoost & In-hosp. Mort. & 1,131/12,674 & 0.867 (0.853--0.881) & Hanley--McNeil \\
+    Shickel et al. (2022) & XGBoost & Readmission & 613/12,674 & 0.762 (0.740--0.784) & Hanley--McNeil \\
+    De Hond et al. (2023) & Gradient Boosting & Readm./Mort. & 577/10,052 & 0.720 (0.670--0.760) & Reported \\
+    De Hond et al. (2023) & Gradient Boosting & Readm./Mort. (retr.) & 577/10,052 & 0.790 (0.750--0.820) & Reported \\
+    Khodadadi et al. (2023) & Patient Forest & Mortality (MIMIC) & 5,377/50,391 & 0.801 (0.794--0.808) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & Patient Forest & Mortality (eICU) & 2,983/41,026 & 0.864 (0.856--0.872) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & Patient Forest & Readmission (eICU) & 7,051/41,026 & 0.869 (0.863--0.875) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & K-Nearest Neighbors & Mortality (MIMIC) & 5,377/50,391 & 0.654 (0.646--0.662) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & Logistic Regression & Mortality (MIMIC) & 5,377/50,391 & 0.773 (0.765--0.781) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & Logistic Regression & Mortality (eICU) & 2,983/41,026 & 0.833 (0.824--0.842) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & Logistic Regression & Readmission (eICU) & 7,051/41,026 & 0.819 (0.813--0.825) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & Naive Bayes & Mortality (MIMIC) & 5,377/50,391 & 0.658 (0.650--0.666) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & Neural Network & Mortality (MIMIC) & 5,377/50,391 & 0.749 (0.741--0.757) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & Neural Network & Mortality (eICU) & 2,983/41,026 & 0.816 (0.807--0.825) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & Neural Network & Readmission (eICU) & 7,051/41,026 & 0.812 (0.806--0.818) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & Random Forest & Mortality (MIMIC) & 5,377/50,391 & 0.763 (0.755--0.771) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & Random Forest & Mortality (eICU) & 2,983/41,026 & 0.839 (0.830--0.848) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & Random Forest & Readmission (eICU) & 7,051/41,026 & 0.814 (0.808--0.820) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & SVM & Mortality (MIMIC) & 5,377/50,391 & 0.746 (0.738--0.754) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & SVM & Mortality (eICU) & 2,983/41,026 & 0.847 (0.838--0.856) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & SVM & Readmission (eICU) & 7,051/41,026 & 0.821 (0.815--0.827) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & XGBoost & Mortality (MIMIC) & 5,377/50,391 & 0.772 (0.764--0.780) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & XGBoost & Mortality (eICU) & 2,983/41,026 & 0.813 (0.804--0.822) & Hanley--McNeil \\
+    Khodadadi et al. (2023) & XGBoost & Readmission (eICU) & 7,051/41,026 & 0.808 (0.802--0.814) & Hanley--McNeil \\
+    Tschoellitsch et al. (2024) & AdaBoost & Readm./Mort. & 310/16,405 & 0.688 (0.655--0.721) & Hanley--McNeil \\
+    Tschoellitsch et al. (2024) & Ensemble & Readm./Mort. & 310/16,405 & 0.714 (0.681--0.747) & Hanley--McNeil \\
+    Tschoellitsch et al. (2024) & Logistic Regression & Readm./Mort. & 310/16,405 & 0.680 (0.647--0.713) & Hanley--McNeil \\
+    Tschoellitsch et al. (2024) & Neural Network & Readm./Mort. & 310/16,405 & 0.652 (0.618--0.686) & Hanley--McNeil \\
+    Tschoellitsch et al. (2024) & Random Forest & Readm./Mort. & 310/16,405 & 0.721 (0.689--0.753) & Hanley--McNeil \\
+    Tschoellitsch et al. (2024) & Random Forest & Readm./Mort. (ext.) & 2,873/58,434 & 0.641 (0.630--0.652) & Hanley--McNeil \\
+    Tschoellitsch et al. (2024) & XGBoost & Readm./Mort. & 310/16,405 & 0.699 (0.666--0.732) & Hanley--McNeil \\
+    Tschoellitsch et al. (2024) & XGBoost & Readm./Mort. (ext.) & 2,873/58,434 & 0.648 (0.637--0.659) & Hanley--McNeil \\
+    Sun M. et al. (2024) & CTCL & Mortality (eICU) & NR/24,600 & 0.894 (not reconstructed) & Excluded$^\dagger$ \\
+    Sun M. et al. (2024) & CTCL & Readmission (eICU) & NR/15,360 & 0.853 (not reconstructed) & Excluded$^\dagger$ \\
+    Sun M. et al. (2024) & Logistic Regression & Mortality (eICU) & NR/24,600 & 0.848 (not reconstructed) & Excluded$^\dagger$ \\
+    Sun M. et al. (2024) & Logistic Regression & Readmission (eICU) & NR/15,360 & 0.808 (not reconstructed) & Excluded$^\dagger$ \\
+    Sun M. et al. (2024) & Neural Network & Mortality (eICU) & NR/24,600 & 0.885 (not reconstructed) & Excluded$^\dagger$ \\
+    Sun M. et al. (2024) & Neural Network & Readmission (eICU) & NR/15,360 & 0.822 (not reconstructed) & Excluded$^\dagger$ \\
+    Sun M. et al. (2024) & Random Forest & Mortality (eICU) & NR/24,600 & 0.872 (not reconstructed) & Excluded$^\dagger$ \\
+    Sun M. et al. (2024) & Random Forest & Readmission (eICU) & NR/15,360 & 0.822 (not reconstructed) & Excluded$^\dagger$ \\
+    Sun M. et al. (2024) & Transformer & Mortality (eICU) & NR/24,600 & 0.879 (not reconstructed) & Excluded$^\dagger$ \\
+    Sun M. et al. (2024) & Transformer & Readmission (eICU) & NR/15,360 & 0.822 (not reconstructed) & Excluded$^\dagger$ \\
+    Dam et al. (2025) & Gradient Boosting & Readm./Mort. (Amsterdam UMC) & 904*/15,328 & 0.765 (0.747--0.783) & Hanley--McNeil \\
+    Dam et al. (2025) & Gradient Boosting & Readm./Mort. (MSZ) & 717*/10,092 & 0.709 (0.687--0.731) & Hanley--McNeil \\
+    Dam et al. (2025) & Gradient Boosting & Readm./Mort. (OLVG) & 1,340*/19,417 & 0.740 (0.724--0.756) & Hanley--McNeil \\
+    Dam et al. (2025) & Gradient Boosting & Readm./Mort. (ext.) & 904*/15,328 & 0.698 (0.678--0.718) & Hanley--McNeil \\
+    Dam et al. (2025) & Gradient Boosting & Readm./Mort. (pooled) & 2,057*/29,509 & 0.729 (0.716--0.742) & Hanley--McNeil \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\vspace{0.4em}\footnotesize * Events estimated from reported incidences rather than reported directly; standard errors and confidence intervals derived from these counts are approximate despite being displayed to three decimals. NR = not reported in the original article. SE tier: \emph{Reported} = derived from the study's own 95\% CI; \emph{Hanley--McNeil} = computed from sample size and event count, corrected for the study's actual evaluation-set size when a train/test split was used. $^\dagger$Excluded: Sun M. et al. (2024) does not report event counts, so no standard error can be reconstructed and these 10 estimates are not included in either the primary or exploratory pooled analyses; they are reported here descriptively only.
+\end{table}

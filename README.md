@@ -32,9 +32,9 @@ The review synthesizes evidence from 8 studies (2020–2025) that simultaneously
 
 **Note on Sun M. et al. (2024):** this study's 10 AUC-ROC estimates are excluded from both
 pooled analyses above because it does not report the event counts needed to reconstruct a
-standard error, and is reported descriptively only (see `results/tables/tabla_detalle_estudios.tex`).
+standard error, and is reported descriptively only (see `results/tables/study_detail_table.tex`).
 It does contribute to the AUC-PRC synthesis, since that pooling method does not depend on
-event counts — see `results/tables/tabla_subanalisis_pr.tex` for details, including why its
+event counts — see `results/tables/pr_subgroup_table.tex` for details, including why its
 AUC-PRC values should not be compared at face value to the other studies'.
 
 ---
@@ -45,19 +45,19 @@ AUC-PRC values should not be compared at face value to the other studies'.
 ├── protocol/
 │   └── protocol_study.md            # Study protocol (search strategy, eligibility, analysis plan)
 ├── data/
-│   └── modelos_extraidos.json       # Consolidated performance metrics dataset
+│   └── extracted_models.json        # Consolidated performance metrics dataset
 ├── results/
 │   ├── prisma_flow_diagram.md       # PRISMA 2020 flow diagram data
 │   ├── study_characteristics.md     # Characteristics of included studies (PRISMA Item 17)
 │   ├── risk_of_bias_assessment.md   # PROBAST risk of bias assessment (8 studies × 5 domains)
 │   ├── individual_results.md        # Individual study performance metrics
 │   ├── forest_plots/
-│   │   └── forest_plots_por_modelo_latex.tex  # Forest plots (AUC-ROC + AUC-PRC)
+│   │   └── forest_plots_by_model.tex       # Forest plots (AUC-ROC + AUC-PRC)
 │   └── tables/
-│       ├── tabla_detalle_estudios.tex      # AUC-ROC detail (78 metrics)
-│       ├── tabla_detalle_estudios_pr.tex   # AUC-PRC detail (22 metrics)
-│       ├── tabla_subanalisis_ml.tex        # Subanalysis by ML model (AUC-ROC)
-│       └── tabla_subanalisis_pr.tex        # Subanalysis AP vs AUC-PRC
+│       ├── study_detail_table.tex          # AUC-ROC detail (78 metrics)
+│       ├── study_detail_table_pr.tex       # AUC-PRC detail (22 metrics)
+│       ├── model_subgroup_table.tex        # Subanalysis by ML model (AUC-ROC)
+│       └── pr_subgroup_table.tex           # Subanalysis AP vs AUC-PRC
 ├── supplementary/
 │   ├── graphical_abstract.png       # Graphical abstract for the manuscript
 │   └── PRISMA_2020_checklist_completed.md # Completed PRISMA 2020 checklist (Items 1–27)
@@ -70,7 +70,7 @@ AUC-PRC values should not be compared at face value to the other studies'.
 
 ## Data description
 
-### `data/modelos_extraidos.json`
+### `data/extracted_models.json`
 
 Structured database containing predictive performance metrics used in the supplementary tables and forest plots.
 
@@ -110,6 +110,9 @@ If you use these materials, please cite:
 
 ## Version History
 
+- **v1.2.0** (2026-09-02): Full-English-language pass (protocol, extracted-data field names and
+  values, and all four results tables translated; six Spanish-named files renamed) and a
+  public-release copyright/readiness review. See [`CHANGELOG.md`](CHANGELOG.md) for details.
 - **v1.1.0** (2026-09-02): Synchronized with the post-review correction round applied to the
   manuscript (logit-scale pooling, exclusion of Sun M. et al. from AUC-ROC pooling,
   outcome-stratified subgroup analyses, corrected forest plots, updated bibliography). See
