@@ -49,8 +49,12 @@ Solo son elegibles los estudios que evalúan e informan sobre el rendimiento pre
 ### Exclusion Criteria
 Estudios no relacionados con el aprendizaje automático o la inteligencia artificial, no centrados en pacientes de UCI, que predicen resultados distintos al reingreso no planificado o la mortalidad, revisiones, editoriales, informes de casos, resúmenes de conferencias, conferencias, publicaciones no revisadas por pares y estudios centrados en pacientes pediátricos de UCI, unidades de cuidados coronarios (UCC) o unidades de cuidados intensivos cardíacos (UCIC), pacientes con insuficiencia cardíaca aguda, unidades de cuidados intensivos respiratorios o unidades de cuidados intensivos quirúrgicos (UCI quirúrgicas). Pacientes con cáncer, estudios que incluyen pacientes diagnosticados con SARS-CoV-2. Artículos con muestras insuficientes o sin validación externa de los modelos propuestos. Estudios relacionados con la muerte por sepsis.
 
+## Registro y Disponibilidad Pública
+
+Esta revisión sistemática no fue registrada prospectivamente en PROSPERO ni en ningún otro registro. El protocolo (estrategia de búsqueda, criterios de elegibilidad, formularios de extracción de datos y plan de análisis) se documentó antes de redactar el manuscrito y se pone a disposición pública en este repositorio junto con la resubmisión del artículo. Para ser precisos: este repositorio no se hizo público sino hasta después de que la revisión estuviera sustancialmente realizada, por lo que su disponibilidad pública no debe leerse como anterior a la conducción de la revisión — solo se afirma que el protocolo existía en forma documentada y que ahora se comparte en su totalidad junto con el manuscrito. No se realizaron enmiendas al protocolo respecto de los análisis reportados.
+
 ## Citation Style
 **Format:** IEEE
 
 ---
-*Version for supplementary submission (curated content).* 
+*Version for supplementary submission (curated content). Last updated: 2026-09-02.*

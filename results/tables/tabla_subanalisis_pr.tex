@@ -13,14 +13,18 @@
     AP & Logistic Regression & 1 & 1 & --- & --- & 310/16,405 & 0.080 & 0.021--0.139 & 0.0\% \\
     AP & AdaBoost & 1 & 1 & --- & --- & 310/16,405 & 0.067 & 0.008--0.126 & 0.0\% \\
     AP & Neural Network & 1 & 1 & --- & --- & 310/16,405 & 0.063 & 0.004--0.122 & 0.0\% \\
-    AUPR/AUPRC & CTCL & 1 & 2 & NR/15,360 [NR=1] & NR/24,600 [NR=1] & --- & 0.853 & 0.811--0.895 & 0.0\% \\
-    AUPR/AUPRC & Transformer & 1 & 2 & NR/15,360 [NR=1] & NR/24,600 [NR=1] & --- & 0.834 & 0.790--0.879 & 13.1\% \\
-    AUPR/AUPRC & Random Forest & 1 & 2 & NR/15,360 [NR=1] & NR/24,600 [NR=1] & --- & 0.829 & 0.777--0.881 & 35.4\% \\
-    AUPR/AUPRC & Logistic Regression & 1 & 2 & NR/15,360 [NR=1] & NR/24,600 [NR=1] & --- & 0.803 & 0.724--0.882 & 72.4\% \\
+    AUPR/AUPRC & CTCL / Mort.$^\dagger$ & 1 & 1 & --- & NR/24,600 & --- & 0.837 & --- & --- \\
+    AUPR/AUPRC & CTCL / Readm.$^\dagger$ & 1 & 1 & NR/15,360 & --- & --- & 0.869 & --- & --- \\
+    AUPR/AUPRC & Transformer / Mort.$^\dagger$ & 1 & 1 & --- & NR/24,600 & --- & 0.811 & --- & --- \\
+    AUPR/AUPRC & Transformer / Readm.$^\dagger$ & 1 & 1 & NR/15,360 & --- & --- & 0.857 & --- & --- \\
+    AUPR/AUPRC & Random Forest / Mort.$^\dagger$ & 1 & 1 & --- & NR/24,600 & --- & 0.802 & --- & --- \\
+    AUPR/AUPRC & Random Forest / Readm.$^\dagger$ & 1 & 1 & NR/15,360 & --- & --- & 0.855 & --- & --- \\
+    AUPR/AUPRC & Logistic Regression / Mort.$^\dagger$ & 1 & 1 & --- & NR/24,600 & --- & 0.762 & --- & --- \\
+    AUPR/AUPRC & Logistic Regression / Readm.$^\dagger$ & 1 & 1 & NR/15,360 & --- & --- & 0.843 & --- & --- \\
     AUPR/AUPRC & Patient Forest & 1 & 3 & 7,051/41,026 & 8,360/91,417 & --- & 0.596 & 0.562--0.630 & 0.0\% \\
     AUPR/AUPRC & XGBoost & 1 & 3 & 189/3,929 & 74/3,929 & 263/3,929 & 0.126 & 0.063--0.188 & 70.7\% \\
 \bottomrule
 \end{tabular}
 \end{adjustbox}
-\par\vspace{0.4em}\footnotesize La familia AUPR/AUPRC agrupa etiquetas equivalentes de área bajo la curva precision-recall. AP se mantiene por separado por no ser directamente intercambiable con AUPR en todos los contextos. * eventos estimados a partir de incidencias reportadas; NR = no reportado en el artículo original.
+\par\vspace{0.4em}\footnotesize La familia AUPR/AUPRC agrupa etiquetas equivalentes de área bajo la curva precision-recall. AP se mantiene por separado por no ser directamente intercambiable con AUPR en todos los contextos. * eventos estimados a partir de incidencias reportadas; NR = no reportado en el artículo original. $^\dagger$Sun M. et al. (2024) es la única fuente para este modelo; mortalidad y readmisión se mantienen como filas descriptivas separadas ($k=1$, sin efecto combinado ni IC) en vez de combinarse, siguiendo el mismo criterio de estratificación por desenlace ya aplicado a las estimaciones de AUC-ROC de este estudio. Estos valores no deben compararse sin más con los de las demás filas (ver limitaciones sobre la prevalencia de evaluación de Sun M. et al. en el manuscrito principal).
 \end{table}

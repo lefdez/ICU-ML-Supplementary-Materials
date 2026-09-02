@@ -21,12 +21,21 @@ The review synthesizes evidence from 8 studies (2020–2025) that simultaneously
 |--------|-------|
 | Studies included | 8 |
 | ML model families evaluated | 17 |
-| AUC-ROC metrics reported | 78 |
+| AUC-ROC metrics reported | 78 (68 pooled + 10 descriptive, see below) |
 | AUC-PRC / AP metrics reported | 22 |
-| Pooled AUC-ROC (random-effects) | 0.791 (95% CI: 0.775–0.807) |
-| Heterogeneity (I²) | 86.5% |
+| Pooled AUC-ROC, primary analysis (k=7, one representative estimate per study, logit-scale random-effects) | 0.814 (95% CI: 0.746–0.868) |
+| Heterogeneity (I²), primary analysis | 98.5% |
+| Pooled AUC-ROC, exploratory analysis (k=68, all extracted estimates, non-independent) | 0.807 (95% CI: 0.786–0.826) |
+| Heterogeneity (I²), exploratory analysis | 98.8% |
 | Databases searched | Scopus, WoS, PubMed, IEEE Xplore |
 | Search period | 2020–2025 |
+
+**Note on Sun M. et al. (2024):** this study's 10 AUC-ROC estimates are excluded from both
+pooled analyses above because it does not report the event counts needed to reconstruct a
+standard error, and is reported descriptively only (see `results/tables/tabla_detalle_estudios.tex`).
+It does contribute to the AUC-PRC synthesis, since that pooling method does not depend on
+event counts — see `results/tables/tabla_subanalisis_pr.tex` for details, including why its
+AUC-PRC values should not be compared at face value to the other studies'.
 
 ---
 
@@ -96,6 +105,16 @@ If you use these materials, please cite:
 ## License
 
 - **Data and documentation**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+---
+
+## Version History
+
+- **v1.1.0** (2026-09-02): Synchronized with the post-review correction round applied to the
+  manuscript (logit-scale pooling, exclusion of Sun M. et al. from AUC-ROC pooling,
+  outcome-stratified subgroup analyses, corrected forest plots, updated bibliography). See
+  [`CHANGELOG.md`](CHANGELOG.md) for the full list of changes and their rationale.
+- **[v1.0.0](https://github.com/lefdez/ICU-ML-Supplementary-Materials/releases/tag/v1.0.0)** (2026-05-09): Initial public release, prior to the correction round above.
 
 ---
 
