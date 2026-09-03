@@ -110,6 +110,15 @@ If you use these materials, please cite:
 
 ## Version History
 
+- **v1.4.0** (2026-09-02): Corrected `graphical_abstract.png`, which had never been updated
+  after the statistical correction round in either this repository or the primary manuscript
+  repository — replaced the stale pooled AUC-ROC, model-architecture, and precision-recall
+  panels with current values, and confirmed the PRISMA checklist is not affected. See
+  [`CHANGELOG.md`](CHANGELOG.md) for details.
+- **v1.3.0** (2026-09-02): Bibliography sync addressing two reference-hygiene issues raised by
+  the journal editor (an AdaBoost background citation swapped for one without a correction
+  record; an erratum citation added for an included study; a PMID added for a DOI that was
+  wrongly flagged as broken). See [`CHANGELOG.md`](CHANGELOG.md) for details.
 - **v1.2.0** (2026-09-02): Full-English-language pass (protocol, extracted-data field names and
   values, and all four results tables translated; six Spanish-named files renamed) and a
   public-release copyright/readiness review. See [`CHANGELOG.md`](CHANGELOG.md) for details.

@@ -4,6 +4,75 @@ All notable changes to this repository are documented here. This project accompa
 manuscript under peer review; this changelog exists so that any reader can see exactly what
 changed between releases and why, alongside the immutable git tags for each version.
 
+## [v1.4.0] — 2026-09-02
+
+Corrected `supplementary/graphical_abstract.png`, which had never been updated after the
+statistical correction round (logit-scale pooling, Sun M. et al. excluded from AUC-ROC pooling,
+outcome-stratified subgroups). Investigation found that **neither existing copy of this
+graphic was current**: this repository's copy and the primary manuscript repository's own
+reference copy (`graphical_abstract_bdcc.png`) carried two different sets of stale numbers
+(pooled AUC-ROC 0.791 here vs. 0.797 there), and no dedicated generator script for this
+graphic existed at all — the only script found (`scripts/generate_graphical_abstract.py` in
+the primary repository) was for a different, unrelated journal submission.
+
+- Pooled AUC-ROC headline: replaced the single stale value (0.791, 95% CI 0.775–0.807,
+  I²=86.5%) with the current dual primary/exploratory report: primary (k=7) 0.814 (95% CI
+  0.746–0.868, I²=98.5%); exploratory (k=68) 0.807 (95% CI 0.786–0.826, I²=98.8%).
+- "Top Model Architectures" panel: replaced the old model-only pooled bars — two of which
+  (CTCL 0.874, GRU+Attention 0.868) no longer exist as valid pooled quantities at all under
+  the corrected, outcome-stratified methodology — with the current top 6 outcome-stratified
+  values (all mortality: Transformer 0.956, Patient Forest 0.834, XGBoost 0.823, Logistic
+  Regression 0.816, Random Forest 0.815, SVM 0.812), matching
+  `results/tables/model_subgroup_table.tex`.
+- "Precision–Recall Metrics" panel: replaced four fabricated "pooled" values for Sun M. et
+  al. (0.853/0.834/0.829/0.803 — these were never valid pooled estimates and are now 8
+  separate k=1 descriptive rows per `results/tables/pr_subgroup_table.tex`) with the only
+  genuinely pooled PR values (Patient Forest AUPRC 0.596, XGBoost AUPRC 0.126, Random Forest
+  AP 0.114, XGBoost AP 0.113), and relabeled the panel to make clear these are pooled-only,
+  with Sun's individual range (0.762–0.869) noted separately as not comparable at face value.
+- "Key Conclusions" bullets rewritten to name the correct top-performing models and outcome,
+  cite the correct heterogeneity (I²≥98%, not 86.5%), and mention Sun M. et al.'s exclusion
+  from AUC-ROC pooling — the single most important methodological change of the correction
+  round, previously absent from this graphic entirely.
+- PRISMA flow counts, PROBAST risk-of-bias counts, GRADE certainty rating, and the bottom
+  summary-statistics strip were all audited and confirmed still accurate — unchanged.
+
+Also audited `supplementary/PRISMA_2020_checklist_completed.md` for the same kind of drift:
+confirmed **not stale** — its 27 PRISMA-item-to-section mappings still match the primary
+manuscript's own labels exactly, and PRISMA checklist items are standardized reporting
+categories, not a summary of results, so they are unaffected by the statistical correction.
+
+## [v1.3.0] — 2026-09-02
+
+Bibliography sync in response to two reference-hygiene issues raised by the journal editor
+during peer review of the manuscript.
+
+- **`references/references.bib`** (50 entries, up from 49):
+  - Removed `Freund1997AdaBoost` (Freund & Schapire, 1997, *JCSS*) and replaced it with
+    `Schapire2003Boosting` (Schapire, "The Boosting Approach to Machine Learning: An Overview,"
+    in *Nonlinear Estimation and Classification*, Springer, 2003, DOI
+    `10.1007/978-0-387-21579-2_9`) — a background citation supporting a single passing mention
+    of AdaBoost's origin. The editor's automated check flagged the 1997 paper as carrying an
+    official correction record; no such record could be independently confirmed via CrossRef,
+    Elsevier, or Retraction Watch, but since it is a low-stakes, single-use background citation
+    it was swapped anyway rather than relying on an unconfirmed absence of evidence. A
+    candidate replacement (the original 1996 ICML conference paper) was considered and rejected
+    because its only resolvable identifier (ACM Digital Library) returns HTTP 403 to automated
+    link-checkers — the same class of false-positive failure this change is meant to avoid.
+  - Added `DeHond2023Erratum` (*Crit Care Med.* 2023;51(4):e105, DOI
+    `10.1097/CCM.0000000000005818`, PMID 36928025), cited alongside the original `DeHond2023`
+    entry. De Hond et al. (2023) is one of the 8 studies this review analyzes, not a background
+    citation, so — unlike the AdaBoost citation — it could not simply be removed or substituted
+    without misrepresenting which study was actually analyzed. The erratum is a purely
+    bibliographic author-name correction (unrelated to any data, method, or metric extracted for
+    this review); standard practice for an included study with a cosmetic erratum is to cite the
+    correction alongside the original, not to swap out the study.
+  - Added a `pmid` field (7063747) to `HanleyMcNeil1982`. Its DOI was flagged by the editor as
+    inaccessible; independent verification (CrossRef, a live `doi.org` redirect, and PubMed)
+    confirmed the DOI is valid and resolves correctly — the RSNA journal site returns an HTTP 403
+    to automated bots, which is almost certainly what the editor's checker encountered. The DOI
+    itself was not changed; the PMID is added as a bot-friendly secondary access point.
+
 ## [v1.2.0] — 2026-09-02
 
 Full-English-language pass and a public-release readiness review, prompted by a request to
