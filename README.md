@@ -110,6 +110,13 @@ If you use these materials, please cite:
 
 ## Version History
 
+- **v1.5.0** (2026-09-04): Forest-plot legibility fix in
+  `results/forest_plots/forest_plots_by_model.tex` — the 29 per-model figures are now rendered
+  at native scale inside landscape pages (previously `scale=0.6` in portrait, which clipped the
+  longest row labels), mirroring a same-day fix to the manuscript's own supplementary material.
+  Also audited, and confirmed unaffected: bibliography completeness and a mortality-horizon
+  subgroup correction made the same day in the primary manuscript, which has no counterpart in
+  this repository. See [`CHANGELOG.md`](CHANGELOG.md) for details.
 - **v1.4.0** (2026-09-02): Corrected `graphical_abstract.png`, which had never been updated
   after the statistical correction round in either this repository or the primary manuscript
   repository — replaced the stale pooled AUC-ROC, model-architecture, and precision-recall

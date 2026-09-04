@@ -19,6 +19,7 @@
 \usepackage[margin=2cm]{geometry}
 \usepackage{booktabs, multirow, adjustbox, float}
 \usepackage{longtable, array, xcolor, caption}
+\usepackage{pdflscape}
 \usepackage{pgfplots, tikz}
 \usepackage{hyperref}
 \usepackage{enumitem}
@@ -142,7 +143,7 @@ Table~\ref{tab:detalle_auc}.}
 \label{fig:fp_global}
 \end{figure}
 
-\newpage
+\begin{landscape}
 \section{Individual AUC-ROC Forest Plots by Model}
 \label{sec:se-tier-note}
 
@@ -150,7 +151,7 @@ Table~\ref{tab:detalle_auc}.}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=10cm,
     symbolic y coords={
@@ -249,14 +250,16 @@ descriptively. Previously reported as a single pooled value (0.790) mixing all t
 outcomes.}
 \label{fig:fp_lr}
 \end{figure}
+\end{landscape}
 
 \newpage
 
+\begin{landscape}
 \subsection{Random Forest (10 entries, 4 studies), stratified by outcome}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=10cm,
     symbolic y coords={
@@ -350,14 +353,16 @@ excluded from pooling but shown descriptively. Previously reported as a single p
 value (0.783) mixing all three outcomes.}
 \label{fig:fp_rf}
 \end{figure}
+\end{landscape}
 
 \newpage
 
+\begin{landscape}
 \subsection{XGBoost (10 entries, 4 studies), stratified by outcome}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=10cm,
     symbolic y coords={
@@ -451,14 +456,16 @@ CI: 0.609--0.796). Previously reported as a single pooled value (0.770) mixing a
 outcomes.}
 \label{fig:fp_xgb}
 \end{figure}
+\end{landscape}
 
 \newpage
 
+\begin{landscape}
 \subsection{Gradient Boosting (9 entries, 3 studies)}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=7.3cm,
     symbolic y coords={
@@ -536,14 +543,16 @@ outcomes.}
 \caption{Forest plot --- Gradient Boosting. Pooled effect: 0.738 (95\% CI: 0.721--0.754).}
 \label{fig:fp_gb}
 \end{figure}
+\end{landscape}
 
 \newpage
 
+\begin{landscape}
 \subsection{Transformer (8 entries, 2 studies), stratified by outcome}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=8cm,
     symbolic y coords={
@@ -623,14 +632,16 @@ markers) are excluded from pooling but shown descriptively. Previously reported 
 single pooled value (0.910) mixing mortality and readmission from two studies.}
 \label{fig:fp_transformer}
 \end{figure}
+\end{landscape}
 
 \newpage
 
+\begin{landscape}
 \subsection{SVM (6 entries, 2 studies), stratified by outcome}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=7.3cm,
     symbolic y coords={
@@ -706,12 +717,14 @@ estimate ($k=1$) is not pooled. Previously reported as a single pooled value (0.
 mixing all three outcomes.}
 \label{fig:fp_svm}
 \end{figure}
+\end{landscape}
 
+\begin{landscape}
 \subsection{Neural Network (6 entries, 3 studies), stratified by outcome}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=7.3cm,
     symbolic y coords={
@@ -782,14 +795,16 @@ excluded from pooling but shown descriptively. Previously reported as a single p
 value (0.791) mixing all three outcomes.}
 \label{fig:fp_nn}
 \end{figure}
+\end{landscape}
 
 \newpage
 
+\begin{landscape}
 \subsection{Patient Forest (3 entries, 1 study), stratified by outcome}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=4.2cm,
     symbolic y coords={
@@ -847,12 +862,14 @@ value (0.791) mixing all three outcomes.}
 Previously reported as a single pooled value (0.845) mixing mortality and readmission.}
 \label{fig:fp_patientforest}
 \end{figure}
+\end{landscape}
 
+\begin{landscape}
 \subsection{LightGBM (3 entries, 1 study): not pooled}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=3.0cm,
     symbolic y coords={
@@ -894,14 +911,16 @@ contributes all three outcomes, so none is pooled ($k=1$ each); previously repor
 single pooled value (0.777) that mixed all three outcomes.}
 \label{fig:fp_lightgbm}
 \end{figure}
+\end{landscape}
 
 \newpage
 
+\begin{landscape}
 \subsection{CTCL (2 entries, 1 study): excluded from pooling}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=2.6cm,
     symbolic y coords={
@@ -939,12 +958,14 @@ prevalence). Previously reported as a pooled value (0.874) mixing mortality and 
 from a study now excluded entirely.}
 \label{fig:fp_ctcl}
 \end{figure}
+\end{landscape}
 
+\begin{landscape}
 \subsection{GRU + Attention (2 entries, 1 study)}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=3.0cm,
     symbolic y coords={
@@ -994,12 +1015,14 @@ the mathematically admissible upper bound of 1.000, both of which are resolved b
 correction.}
 \label{fig:fp_gruatt}
 \end{figure}
+\end{landscape}
 
+\begin{landscape}
 \subsection{GRU (2 entries, 1 study)}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=3.0cm,
     symbolic y coords={
@@ -1048,14 +1071,16 @@ and produced a confidence interval exceeding the mathematically admissible upper
 1.000, both of which are resolved by this correction.}
 \label{fig:fp_gru}
 \end{figure}
+\end{landscape}
 
 \newpage
 
+\begin{landscape}
 \subsection{CatBoost (2 entries, 1 study): not pooled}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=2.6cm,
     symbolic y coords={
@@ -1101,14 +1126,16 @@ outcome. Previously reported as a pooled value (0.830, 95\% CI 0.691--0.969) mix
 these two outcomes.}
 \label{fig:fp_catboost}
 \end{figure}
+\end{landscape}
 
 \newpage
 
+\begin{landscape}
 \subsection{Ensemble (1 entry, 1 study)}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=3.0cm,
     symbolic y coords={
@@ -1153,14 +1180,16 @@ al.~\cite{Tschoellitsch2024}'s actual evaluation-set size (25\% of the internal 
 main text, Section~2.10.4).}
 \label{fig:fp_ensemble}
 \end{figure}
+\end{landscape}
 
 \newpage
 
+\begin{landscape}
 \subsection{AdaBoost (1 entry, 1 study)}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=3.0cm,
     symbolic y coords={
@@ -1204,14 +1233,16 @@ main text, Section~2.10.4).}
 al.~\cite{Tschoellitsch2024}'s actual evaluation-set size (main text, Section~2.10.4).}
 \label{fig:fp_adaboost}
 \end{figure}
+\end{landscape}
 
 \newpage
 
+\begin{landscape}
 \subsection{Naive Bayes (1 entry, 1 study)}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=3.0cm,
     symbolic y coords={
@@ -1256,14 +1287,16 @@ al.~\cite{Khodadadi2023}'s actual evaluation-set size (25\% split; main text,
 Section~2.10.4).}
 \label{fig:fp_nb}
 \end{figure}
+\end{landscape}
 
 \newpage
 
+\begin{landscape}
 \subsection{K-Nearest Neighbors (1 entry, 1 study)}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=3.0cm,
     symbolic y coords={
@@ -1308,6 +1341,7 @@ Khodadadi et al.~\cite{Khodadadi2023}'s actual evaluation-set size (main text,
 Section~2.10.4).}
 \label{fig:fp_knn}
 \end{figure}
+\end{landscape}
 
 % ==================================================================
 \newpage
@@ -1452,14 +1486,14 @@ into one number mixing both outcomes (e.g., CTCL was previously reported as 0.87
 \label{fig:fp_global_ap}
 \end{figure}
 
-\newpage
+\begin{landscape}
 \section{Individual Precision--Recall Forest Plots by Model}
 
 \subsection{Patient Forest --- AUPR/AUPRC (3 entries, 1 study)}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=3.4cm,
     symbolic y coords={
@@ -1503,12 +1537,14 @@ into one number mixing both outcomes (e.g., CTCL was previously reported as 0.87
 \caption{PR forest plot --- Patient Forest (AUPR/AUPRC). Pooled effect: 0.596 (95\% CI: 0.562--0.630).}
 \label{fig:fp_pr_patientforest}
 \end{figure}
+\end{landscape}
 
+\begin{landscape}
 \subsection{XGBoost --- AUPR/AUPRC (3 entries, 1 study)}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=3.4cm,
     symbolic y coords={
@@ -1552,14 +1588,16 @@ into one number mixing both outcomes (e.g., CTCL was previously reported as 0.87
 \caption{PR forest plot --- XGBoost (AUPR/AUPRC). Pooled effect: 0.126 (95\% CI: 0.063--0.188).}
 \label{fig:fp_pr_xgboost_auprc}
 \end{figure}
+\end{landscape}
 
 \newpage
 
+\begin{landscape}
 \subsection{CTCL --- AUPR/AUPRC (2 entries, 1 study): not pooled}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=2.2cm,
     symbolic y coords={
@@ -1599,12 +1637,14 @@ into one number (main text, Section~2.10.4). See main text Section~4.1 for why
 these values should still not be compared at face value to the other studies'.}
 \label{fig:fp_pr_ctcl}
 \end{figure}
+\end{landscape}
 
+\begin{landscape}
 \subsection{Transformer --- AUPR/AUPRC (2 entries, 1 study): not pooled}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=2.2cm,
     symbolic y coords={
@@ -1644,12 +1684,14 @@ mixed into one number (main text, Section~2.10.4). See main text Section~4.1 for
 why these values should still not be compared at face value to the other studies'.}
 \label{fig:fp_pr_transformer}
 \end{figure}
+\end{landscape}
 
+\begin{landscape}
 \subsection{Random Forest --- AUPR/AUPRC (2 entries, 1 study): not pooled}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=2.2cm,
     symbolic y coords={
@@ -1689,14 +1731,16 @@ into one number (main text, Section~2.10.4). See main text Section~4.1 for why
 these values should still not be compared at face value to the other studies'.}
 \label{fig:fp_pr_rf_auprc}
 \end{figure}
+\end{landscape}
 
 \newpage
 
+\begin{landscape}
 \subsection{Logistic Regression --- AUPR/AUPRC (2 entries, 1 study): not pooled}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=2.2cm,
     symbolic y coords={
@@ -1738,12 +1782,14 @@ Section~4.1 for why these values should still not be compared at face value to
 the other studies'.}
 \label{fig:fp_pr_lr_auprc}
 \end{figure}
+\end{landscape}
 
+\begin{landscape}
 \subsection{Random Forest --- AP (2 entries, 1 study)}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=3.0cm,
     symbolic y coords={
@@ -1785,12 +1831,14 @@ the other studies'.}
 \caption{PR forest plot --- Random Forest (AP). Pooled effect: 0.114 (95\% CI: 0.062--0.165).}
 \label{fig:fp_pr_rf_ap}
 \end{figure}
+\end{landscape}
 
+\begin{landscape}
 \subsection{XGBoost --- AP (2 entries, 1 study)}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=3.0cm,
     symbolic y coords={
@@ -1832,14 +1880,16 @@ the other studies'.}
 \caption{PR forest plot --- XGBoost (AP). Pooled effect: 0.113 (95\% CI: 0.056--0.170).}
 \label{fig:fp_pr_xgboost_ap}
 \end{figure}
+\end{landscape}
 
 \newpage
 
+\begin{landscape}
 \subsection{Ensemble --- AP (1 entry, 1 study)}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=3.0cm,
     symbolic y coords={
@@ -1879,12 +1929,14 @@ the other studies'.}
 \caption{PR forest plot --- Ensemble (AP). Pooled effect: 0.080 (95\% CI: 0.021--0.139).}
 \label{fig:fp_pr_ensemble_ap}
 \end{figure}
+\end{landscape}
 
+\begin{landscape}
 \subsection{Logistic Regression --- AP (1 entry, 1 study)}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=3.0cm,
     symbolic y coords={
@@ -1924,12 +1976,14 @@ the other studies'.}
 \caption{PR forest plot --- Logistic Regression (AP). Pooled effect: 0.080 (95\% CI: 0.021--0.139).}
 \label{fig:fp_pr_lr_ap}
 \end{figure}
+\end{landscape}
 
+\begin{landscape}
 \subsection{AdaBoost --- AP (1 entry, 1 study)}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=3.0cm,
     symbolic y coords={
@@ -1969,12 +2023,14 @@ the other studies'.}
 \caption{PR forest plot --- AdaBoost (AP). Pooled effect: 0.067 (95\% CI: 0.008--0.126).}
 \label{fig:fp_pr_adaboost_ap}
 \end{figure}
+\end{landscape}
 
+\begin{landscape}
 \subsection{Neural Network --- AP (1 entry, 1 study)}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
 \begin{axis}[
     width=15cm, height=3.0cm,
     symbolic y coords={
@@ -2014,6 +2070,7 @@ the other studies'.}
 \caption{PR forest plot --- Neural Network (AP). Pooled effect: 0.063 (95\% CI: 0.004--0.122).}
 \label{fig:fp_pr_nn_ap}
 \end{figure}
+\end{landscape}
 
 
 \section{Summary Tables}

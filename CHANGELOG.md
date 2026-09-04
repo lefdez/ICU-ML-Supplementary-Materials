@@ -4,6 +4,51 @@ All notable changes to this repository are documented here. This project accompa
 manuscript under peer review; this changelog exists so that any reader can see exactly what
 changed between releases and why, alongside the immutable git tags for each version.
 
+## [v1.5.0] — 2026-09-04
+
+Forest-plot legibility fix in `results/forest_plots/forest_plots_by_model.tex`, mirroring an
+identical, same-day correction applied to the manuscript's own supplementary material
+(`supplementary_material_bdcc.tex`, primary manuscript repository) after a reader-reported
+legibility issue.
+
+- The 29 individual per-model forest plots (Section 2, "Individual AUC-ROC Forest Plots by
+  Model," and the equivalent Precision–Recall section) were rendered at `scale=0.6` — small
+  enough that axis and per-study row labels were hard to read, and in several figures the
+  longest row labels (e.g., "Tschoellitsch 2024 / Comp. (ext.)") were being clipped at the
+  page's right margin once enlarged, because a portrait page has no room left once such a
+  label is legible. Both figures are now rendered at native scale (`scale=1.0`, ≈67% larger
+  than before) inside a landscape page (`pdflscape`), which resolves the clipping and makes
+  every label clearly legible.
+- Each figure's subsection heading (e.g., "2.1 Logistic Regression...") now sits on the same
+  landscape page as its figure, rather than stranded alone on a preceding portrait page; the
+  two section-level headings ("Individual AUC-ROC Forest Plots by Model" and "Individual
+  Precision–Recall Forest Plots by Model") are treated the same way. Net effect: 34 pages (up
+  from 22), not one wasted page per heading plus one per figure.
+- The "Global Forest Plot" summary figure (Section 1.1) was audited and left unchanged: it
+  was already rendered at native scale with no `scale=` reduction and fits a portrait page
+  without any overflow.
+- Removed local, gitignored, orphaned build artifacts left over from the
+  `forest_plots_por_modelo_latex` → `forest_plots_by_model` rename in v1.2.0
+  (`.aux`/`.log`/`.out`/`.pdf`); per `.gitignore`, none of these were ever tracked by git.
+
+Also audited today, and confirmed **not** affected by anything corrected in the primary
+manuscript repository:
+- **Bibliography completeness**: `references/references.bib` and all four
+  `results/tables/*.tex` files already cite all 8 included studies (Curth2020, Dam2025,
+  DeHond2023, Khodadadi2023, Shickel2022, Sun2024, Thoral2021, Tschoellitsch2024) — covered by
+  the v1.3.0 bibliography sync. A separate, file-local citation omission was found and fixed
+  today only in the primary repository's `supplementary_material_bdcc.tex` (three studies named
+  in that file's Table S-Rep without an accompanying `\cite`); it has no counterpart here, since
+  this repository's own table fragments do not use `\cite` commands for any study.
+- **Mortality-horizon subgroup figures**: a numeric inconsistency was found and corrected today
+  in the primary manuscript (`articulo_bdcc.tex`) between its Results narrative and its own
+  Table 4, for the in-hospital/admission-referenced mortality subgroup (stale: k=24, I²=99.8%,
+  AUC-ROC=0.832; corrected to k=19, I²=99.1%, AUC-ROC=0.846, matching that manuscript's own
+  GRADE summary table throughout). This repository has no equivalent stratified
+  mortality-horizon table or figure, so nothing here required a corresponding change.
+- `results/tables/*.tex` (all four): `adjustbox`-scaled table fragments with no page geometry
+  of their own, unaffected by the page-orientation issue described above.
+
 ## [v1.4.0] — 2026-09-02
 
 Corrected `supplementary/graphical_abstract.png`, which had never been updated after the
